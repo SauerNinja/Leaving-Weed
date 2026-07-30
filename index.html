@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clearing — A Personal THC Quit Journal, Day by Day</title>
+<meta name="description" content="A day-by-day personal account of quitting weed after years of daily use, paired with the biology behind why each stage feels the way it does.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clearing — A Personal THC Quit Journal">
+<meta property="og:description" content="A day-by-day account of quitting weed, paired with the biology behind each stage.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/index.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-top:#0F1A17;
+    --bg-bottom:#EDEAE3;
+    --sage:#7FA88F;
+    --amber:#D98E3F;
+    --fog:#9BA69E;
+    --ink:#12201C;
+    --paper:#EDEAE3;
+    --rule:rgba(237,234,227,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans', sans-serif;
+    background:var(--bg-top);
+    color:var(--paper);
+    line-height:1.6;
+  }
+  ::selection{background:var(--amber);color:var(--ink);}
+
+  h1,h2,h3,.serif{font-family:'Newsreader', serif;}
+
+  a{color:var(--amber);}
+
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+
+  /* HERO */
+  .hero{
+    min-height:92vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(127,168,143,0.18), transparent 70%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-size:0.8rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:500;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 4.6rem);
+    font-weight:500;
+    line-height:1.05;
+    margin:0.4em 0 0.3em;
+    max-width:11ch;
+  }
+  .hero p.lede{
+    font-size:1.15rem;
+    color:var(--fog);
+    max-width:46ch;
+  }
+  .counter{
+    margin-top:2.2rem;
+    display:inline-flex;
+    align-items:baseline;
+    gap:0.5rem;
+    padding:0.9rem 1.3rem;
+    border:1px solid var(--rule);
+    border-radius:2px;
+    width:fit-content;
+  }
+  .counter .num{font-family:'Newsreader',serif;font-size:2rem;color:var(--amber);}
+  .counter .label{font-size:0.85rem;color:var(--fog);}
+  .edit-note{font-size:0.72rem;color:rgba(155,166,158,0.7);margin-top:0.6rem;}
+
+  /* SECTION */
+  section{padding:5.5rem 0;position:relative;}
+  .kicker{
+    font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--sage);margin-bottom:1rem;font-weight:500;
+  }
+  h2.section-title{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:500;margin:0 0 1.2rem;}
+
+  .why p{color:var(--fog);font-size:1.05rem;}
+  .why blockquote{
+    font-family:'Newsreader',serif;
+    font-style:italic;
+    font-size:1.35rem;
+    color:var(--paper);
+    border-left:2px solid var(--amber);
+    padding-left:1.2rem;
+    margin:2rem 0;
+  }
+
+  /* TIMELINE — the signature element: a fog line that clears as you descend */
+  .timeline-section{
+    background:linear-gradient(180deg, var(--bg-top) 0%, #1A2B25 30%, #3E4E44 62%, var(--bg-bottom) 100%);
+    color:var(--ink);
+  }
+  .timeline-section .kicker,
+  .timeline-section h2.section-title{color:inherit;}
+  .timeline-section h2.section-title{color:#F4F1EA;}
+  .timeline{
+    position:relative;
+    margin-top:3rem;
+    padding-left:2.4rem;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:0.4rem;
+    top:0.3rem;
+    bottom:0.3rem;
+    width:1px;
+    background:linear-gradient(180deg, rgba(237,234,227,0.5), rgba(18,32,28,0.4));
+  }
+  .milestone{
+    position:relative;
+    padding-bottom:3.2rem;
+  }
+  .milestone:last-child{padding-bottom:0;}
+  .milestone::before{
+    content:"";
+    position:absolute;
+    left:-2.4rem;
+    top:0.35rem;
+    width:9px;height:9px;
+    border-radius:50%;
+    background:var(--amber);
+    box-shadow:0 0 0 4px rgba(217,142,63,0.18);
+  }
+  .milestone .when{
+    font-size:0.78rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--amber);
+    font-weight:600;
+  }
+  .milestone h3{
+    font-size:1.4rem;
+    margin:0.3rem 0 0.5rem;
+    color:var(--paper);
+  }
+  .timeline-section .milestone h3{color:#F4F1EA;}
+  .milestone p{
+    color:var(--fog);
+    max-width:56ch;
+    font-size:1rem;
+  }
+  .timeline-section .milestone p{color:#3A4640;}
+  .milestone .placeholder{
+    font-style:italic;
+    color:rgba(217,142,63,0.85);
+  }
+
+  /* SCIENCE */
+  .science{background:var(--bg-bottom);color:var(--ink);}
+  .science .kicker{color:#4A6357;}
+  .science h2.section-title{color:var(--ink);}
+  details{
+    border-top:1px solid rgba(18,32,28,0.14);
+    padding:1.2rem 0;
+  }
+  details:last-of-type{border-bottom:1px solid rgba(18,32,28,0.14);}
+  summary{
+    cursor:pointer;
+    font-family:'Newsreader',serif;
+    font-size:1.15rem;
+    font-weight:500;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";
+    font-size:1.4rem;
+    color:#4A6357;
+    transition:transform 0.2s ease;
+  }
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{color:#3A4640;margin:0.9rem 0 0.2rem;max-width:60ch;}
+  details .src{font-size:0.85rem;color:#6B7A72;margin-top:0.6rem;}
+
+  /* SOURCES */
+  .sources{background:var(--bg-bottom);color:var(--ink);padding-top:0;}
+  .sources h2.section-title{color:var(--ink);}
+  .sources .kicker{color:#4A6357;}
+  .source-item{
+    padding:1.1rem 0;
+    border-top:1px solid rgba(18,32,28,0.14);
+  }
+  .source-item:last-child{border-bottom:1px solid rgba(18,32,28,0.14);}
+  .source-item .concept{font-weight:600;font-size:1rem;color:var(--ink);}
+  .source-item .cite{
+    font-size:0.9rem;color:#4A6357;font-style:italic;margin-top:0.3rem;
+  }
+
+  footer{
+    background:var(--bg-bottom);color:#6B7A72;
+    padding:3rem 0 4rem;font-size:0.85rem;
+  }
+  footer a{color:#4A6357;}
+
+  @media (max-width:600px){
+    .timeline{padding-left:1.8rem;}
+    .milestone::before{left:-1.8rem;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    details, .milestone::before{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="eyebrow">A quit journey — day by day</div>
+  <h1>Clearing</h1>
+  <p class="lede">
+    A record of quitting weed after years of daily use — not a how-to,
+    just what actually happened, week by week, and the biology behind why it felt the way it did.
+  </p>
+  <div class="counter">
+    <span class="num">Day 1</span>
+    <span class="label">— edit this to your current count</span>
+  </div>
+  <p class="edit-note">Replace "Day 1" above with your real day count each time you update the site.</p>
+</header>
+
+<section class="why wrap">
+  <div class="kicker">Why this exists</div>
+  <h2 class="section-title">The short version</h2>
+  <p>
+    [Write a few sentences here about why you're quitting and why you're documenting it publicly.
+    Keep it honest — this section sets the tone for everything after it.]
+  </p>
+  <blockquote>
+    "[Optional: a single line that captures where your head is right now — a quote to yourself.]"
+  </blockquote>
+  <p>
+    This isn't medical advice, and it isn't a script anyone else should follow exactly.
+    It's one nervous system's account of recalibrating.
+  </p>
+</section>
+
+<section class="timeline-section">
+  <div class="wrap">
+    <div class="kicker">The path</div>
+    <h2 class="section-title">Timeline</h2>
+
+    <div class="timeline">
+
+      <div class="milestone">
+        <div class="when">Day 1</div>
+        <h3>The decision</h3>
+        <p class="placeholder">[What made today the day. What you noticed in your body and mind at the start.]</p>
+      </div>
+
+      <div class="milestone">
+        <div class="when">Days 2–7</div>
+        <h3>The first week</h3>
+        <p class="placeholder">[Sleep, appetite, mood swings, irritability, cravings — whatever showed up.]</p>
+      </div>
+
+      <div class="milestone">
+        <div class="when">Weeks 2–4</div>
+        <h3>The brownout</h3>
+        <p class="placeholder">[This is usually the hardest stretch — flat affect, low motivation, short temper. Write what it actually looked like day to day.]</p>
+      </div>
+
+      <div class="milestone">
+        <div class="when">Month 2</div>
+        <h3>First signs of clearing</h3>
+        <p class="placeholder">[Any moments where things felt lighter, sharper, more present — even briefly.]</p>
+      </div>
+
+      <div class="milestone">
+        <div class="when">Ongoing</div>
+        <h3>Where things stand now</h3>
+        <p class="placeholder">[Keep adding milestones here as time passes. Copy this block for each new entry.]</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="science wrap">
+  <div class="kicker">Grounding it</div>
+  <h2 class="section-title">What's actually happening</h2>
+  <p style="color:#3A4640;max-width:60ch;">
+    The day-to-day experience above has a physiological basis. These are plain-language
+    summaries of the mechanisms involved, each backed by a real source below.
+  </p>
+
+  <details open>
+    <summary>Why the first month feels so flat</summary>
+    <p>
+      Regular heavy use leads the brain to reduce the number of CB1 receptors it keeps
+      active on the surface of neurons. Once use stops, there's a real gap before those
+      receptors are rebuilt — commonly a couple of weeks to about a month — which shows up
+      as low motivation, blunted mood, and a general sense of static.
+    </p>
+    <div class="src">Source: Hirvonen et al., 2012, Molecular Psychiatry — see Sources below.</div>
+  </details>
+
+  <details>
+    <summary>Why concentration and memory feel foggy</summary>
+    <p>
+      THC dampens activity in the prefrontal cortex, the region responsible for holding
+      several pieces of information in mind at once and tracking time accurately. That's
+      part of why heavy use is linked to memory lapses and a distorted sense of how fast
+      time is passing — and why that fog can linger while the system recalibrates after quitting.
+    </p>
+    <div class="src">Source: D'Souza et al., 2004, Neuropsychopharmacology — see Sources below.</div>
+  </details>
+
+  <details>
+    <summary>Why cravings spike hardest right when you're doing well</summary>
+    <p>
+      In behavioral terms, this is a well-documented pattern: removing a long-standing habit
+      often produces a short, intense spike in the urge to do it again before that urge fades
+      for good. Expecting the spike makes it easier to ride out.
+    </p>
+    <div class="src">Source: Skinner, 1938, The Behavior of Organisms — see Sources below.</div>
+  </details>
+
+  <details>
+    <summary>What actually speeds up feeling normal again</summary>
+    <p>
+      Two levers with real evidence behind them: sustained aerobic movement, which promotes
+      a protein (BDNF) involved in rebuilding neural connections, and brief cold exposure,
+      which shifts the nervous system's focus away from craving and toward basic regulation.
+      Neither is a shortcut, but both measurably help.
+    </p>
+    <div class="src">Sources: Cotman & Berchtold, 2002; Srámek et al., 2000 — see Sources below.</div>
+  </details>
+
+</section>
+
+<section class="sources wrap">
+  <div class="kicker">References</div>
+  <h2 class="section-title">Sources</h2>
+
+  <div class="source-item">
+    <div class="concept">Self-medication and substance use</div>
+    <div class="cite">Khantzian, E. J. (1985). The self-medication hypothesis of addictive disorders: focus on heroin and cocaine dependence. <em>American Journal of Psychiatry</em>, 142(11), 1259–1264.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">Extinction bursts in behavior change</div>
+    <div class="cite">Skinner, B. F. (1938). <em>The Behavior of Organisms: An Experimental Analysis</em>. Appleton-Century.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">Prefrontal cortex function</div>
+    <div class="cite">Weinberger, D. R. (1988). Schizophrenia and the frontal lobe. <em>Trends in Neurosciences</em>, 11(8), 367–370.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">Dopamine and salience</div>
+    <div class="cite">Kapur, S. (2003). Psychosis as a state of aberrant salience: a framework linking biology, phenomenology, and pharmacology in schizophrenia. <em>American Journal of Psychiatry</em>, 160(1), 13–23.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">CB1 receptor downregulation and recovery</div>
+    <div class="cite">Hirvonen, J., et al. (2012). Reversible and regionally selective downregulation of brain cannabinoid CB1 receptors in chronic daily cannabis smokers. <em>Molecular Psychiatry</em>, 17(6), 642–649.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">THC's effect on working memory and time perception</div>
+    <div class="cite">D'Souza, D. C., et al. (2004). The psychotomimetic effects of intravenous delta-9-tetrahydrocannabinol in healthy individuals: implications for psychosis. <em>Neuropsychopharmacology</em>, 29(8), 1558–1572.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">Exercise and neuroplasticity (BDNF)</div>
+    <div class="cite">Cotman, C. W., & Berchtold, N. C. (2002). Exercise: a behavioral intervention to enhance brain health and plasticity. <em>Trends in Neurosciences</em>, 25(6), 295–301.</div>
+  </div>
+
+  <div class="source-item">
+    <div class="concept">Cold exposure and nervous system regulation</div>
+    <div class="cite">Srámek, P., et al. (2000). Human physiological responses to immersion into water of different temperatures. <em>European Journal of Applied Physiology</em>, 81(5), 436–442.</div>
+  </div>
+
+</section>
+
+<footer class="wrap">
+  <p>Updated as I go. Not medical advice — if you're struggling, talk to a doctor or counselor who knows your situation.</p>
+</footer>
+
+</body>
+</html>
