@@ -9,13 +9,12 @@ Live at: https://sauerninja.github.io/quit-thc-leave/
 
 ## Why this exists
 
-I've dealt with this myself, and writing it out — grounded in real sources
-instead of guesswork or shame — has helped me. I'm sharing it publicly in
-case it's useful to someone else working through the same thing.
+A public, sourced resource for anyone dealing with heavy cannabis use and trying to quit —
+grounded in real clinical literature instead of guesswork, shame, or vague advice.
 
 ## Files
 - `index.html` — **the main page.** General, sourced info on THC withdrawal, why severity varies, and what treatment actually works. This is what's meant to rank in search and get shared.
-- `journal.html` — an optional personal day-by-day log template (timeline, day counter). Not indexed by search engines; edit freely if you want to keep a public log alongside the main page, or ignore it.
+- `journal.html` — an optional day-by-day journal template that any visitor could use to track their own quit (timeline, day counter). Not indexed by search engines; it's a tool, not a record of anyone in particular.
 - `LICENSE` — MIT license
 - `robots.txt` / `sitemap.xml` — search engine configuration
 
