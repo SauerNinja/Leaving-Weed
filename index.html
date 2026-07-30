@@ -3,410 +3,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clearing — A Personal THC Quit Journal, Day by Day</title>
-<meta name="description" content="A day-by-day personal account of quitting weed after years of daily use, paired with the biology behind why each stage feels the way it does.">
+<title>Quitting THC: Withdrawal Timeline, Why It's Harder for Some, and What Actually Helps</title>
+<meta name="description" content="A sourced guide to THC withdrawal: the real timeline and symptoms, why quitting hits ADHD, autism, depression, and schizotypal traits harder, evidence-based treatment options, and how to recover from a single slip without losing progress.">
+<meta name="keywords" content="THC withdrawal timeline, weed withdrawal symptoms, how to quit weed, cannabis withdrawal syndrome, self-medication hypothesis, cannabis and ADHD, cannabis and autism, CB1 receptor recovery, cannabis use disorder treatment, lapse vs relapse weed">
+<meta name="author" content="Anonymous">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/index.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Clearing — A Personal THC Quit Journal">
-<meta property="og:description" content="A day-by-day account of quitting weed, paired with the biology behind each stage.">
-<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/index.html">
+<link rel="canonical" href="https://sauerninja.github.io/quit-thc-leave/index.html">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quitting THC: Withdrawal Timeline, Why It's Harder for Some, and What Actually Helps">
+<meta property="og:description" content="A sourced guide to THC withdrawal — real timeline, why it hits ADHD, autism, depression, and schizotypal traits harder, and evidence-based treatment that actually works.">
+<meta property="og:url" content="https://sauerninja.github.io/quit-thc-leave/index.html">
+<meta property="og:site_name" content="Quitting THC — A Sourced Guide">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quitting THC: Withdrawal Timeline, Why It's Harder for Some, and What Actually Helps">
+<meta name="twitter:description" content="A sourced guide to THC withdrawal — real timeline, why it hits certain conditions harder, and evidence-based treatment that actually works.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Quitting THC: Withdrawal Timeline, Why It's Harder for Some, and What Actually Helps",
+  "description": "A sourced guide to THC withdrawal, why severity varies by condition, and evidence-based treatment options.",
+  "author": { "@type": "Person", "name": "Anonymous" },
+  "mainEntityOfPage": "https://sauerninja.github.io/quit-thc-leave/index.html",
+  "articleSection": ["Withdrawal", "Self-medication", "Comorbid conditions", "Psychosis risk", "Treatment", "Recovery", "Relapse prevention"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does THC withdrawal last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Withdrawal typically begins within 24 hours of stopping, peaks around days 2 to 6, and most symptoms resolve within about two weeks. Motivation and concentration can take longer to fully return, often 2 to 4 weeks, as cannabinoid receptors continue rebuilding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is quitting weed harder for people with ADHD, autism, or depression?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These conditions often involve dopamine or sensory-processing differences that make cannabis unusually effective at self-medicating specific symptoms, which means withdrawal removes both the substance and its functional benefit at the same time, often making the underlying condition's symptoms resurface exactly when withdrawal symptoms peak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does one relapse ruin progress after quitting weed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single, low-dose lapse followed immediately by stopping again is metabolically different from an extended return to use. Because THC clears quickly at low doses when cannabinoid receptors are already reduced, a brief slip does not reset receptor recovery the way repeated or high-dose use does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What treatments actually work for quitting cannabis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The strongest evidence supports cognitive behavioral therapy, motivational enhancement therapy, and contingency management, especially combined. No medication is yet FDA-approved specifically for cannabis withdrawal, though N-acetylcysteine, gabapentin, and CBD have shown early promise in trials."
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{
-    --bg-top:#0F1A17;
-    --bg-bottom:#EDEAE3;
-    --sage:#7FA88F;
-    --amber:#D98E3F;
-    --fog:#9BA69E;
-    --ink:#12201C;
-    --paper:#EDEAE3;
-    --rule:rgba(237,234,227,0.14);
+    --bg:#12201C; --sage:#7FA88F; --amber:#D98E3F; --fog:#9BA69E;
+    --paper:#EDEAE3; --rule:rgba(237,234,227,0.14); --panel:#182821;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    font-family:'Work Sans', sans-serif;
-    background:var(--bg-top);
-    color:var(--paper);
-    line-height:1.6;
-  }
-  ::selection{background:var(--amber);color:var(--ink);}
-
-  h1,h2,h3,.serif{font-family:'Newsreader', serif;}
-
+  body{margin:0;font-family:'Work Sans',sans-serif;background:var(--bg);color:var(--paper);line-height:1.65;}
+  ::selection{background:var(--amber);color:var(--bg);}
+  h1,h2,h3,.serif{font-family:'Newsreader',serif;}
   a{color:var(--amber);}
+  .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
 
-  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+  header.hero{padding:5rem 0 3rem;border-bottom:1px solid var(--rule);}
+  .eyebrow{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);font-weight:500;}
+  h1{font-size:clamp(2.1rem,5.5vw,3.1rem);font-weight:500;line-height:1.12;margin:0.4em 0 0.5em;max-width:20ch;}
+  .lede{font-size:1.08rem;color:var(--fog);max-width:58ch;}
+  .disclaimer{margin-top:1.8rem;padding:1rem 1.2rem;border-left:2px solid var(--amber);background:var(--panel);font-size:0.92rem;color:var(--fog);border-radius:2px;}
 
-  /* HERO */
-  .hero{
-    min-height:92vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(127,168,143,0.18), transparent 70%);
-    pointer-events:none;
-  }
-  .eyebrow{
-    font-size:0.8rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--sage);
-    font-weight:500;
-  }
-  .hero h1{
-    font-size:clamp(2.6rem, 7vw, 4.6rem);
-    font-weight:500;
-    line-height:1.05;
-    margin:0.4em 0 0.3em;
-    max-width:11ch;
-  }
-  .hero p.lede{
-    font-size:1.15rem;
-    color:var(--fog);
-    max-width:46ch;
-  }
-  .counter{
-    margin-top:2.2rem;
-    display:inline-flex;
-    align-items:baseline;
-    gap:0.5rem;
-    padding:0.9rem 1.3rem;
-    border:1px solid var(--rule);
-    border-radius:2px;
-    width:fit-content;
-  }
-  .counter .num{font-family:'Newsreader',serif;font-size:2rem;color:var(--amber);}
-  .counter .label{font-size:0.85rem;color:var(--fog);}
-  .edit-note{font-size:0.72rem;color:rgba(155,166,158,0.7);margin-top:0.6rem;}
+  nav.toc{padding:1.6rem 0;border-bottom:1px solid var(--rule);}
+  nav.toc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:0.4rem 1.2rem;}
+  nav.toc a{font-size:0.85rem;color:var(--fog);text-decoration:none;}
+  nav.toc a:hover{color:var(--amber);}
 
-  /* SECTION */
-  section{padding:5.5rem 0;position:relative;}
-  .kicker{
-    font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;
-    color:var(--sage);margin-bottom:1rem;font-weight:500;
-  }
-  h2.section-title{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:500;margin:0 0 1.2rem;}
+  section{padding:3.6rem 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+  .kicker{font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:0.8rem;font-weight:500;}
+  h2{font-size:clamp(1.5rem,3.6vw,1.95rem);font-weight:500;margin:0 0 1.1rem;}
+  h3{font-size:1.15rem;font-weight:600;margin:1.6rem 0 0.5rem;color:var(--paper);}
+  p{color:var(--paper);max-width:62ch;}
+  p.muted{color:var(--fog);}
 
-  .why p{color:var(--fog);font-size:1.05rem;}
-  .why blockquote{
-    font-family:'Newsreader',serif;
-    font-style:italic;
-    font-size:1.35rem;
-    color:var(--paper);
-    border-left:2px solid var(--amber);
-    padding-left:1.2rem;
-    margin:2rem 0;
-  }
+  .stat-row{display:flex;gap:1.6rem;flex-wrap:wrap;margin:1.4rem 0;}
+  .stat{background:var(--panel);border:1px solid var(--rule);border-radius:3px;padding:1rem 1.2rem;min-width:150px;}
+  .stat .n{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--amber);}
+  .stat .l{font-size:0.8rem;color:var(--fog);margin-top:0.2rem;}
 
-  /* TIMELINE — the signature element: a fog line that clears as you descend */
-  .timeline-section{
-    background:linear-gradient(180deg, var(--bg-top) 0%, #1A2B25 30%, #3E4E44 62%, var(--bg-bottom) 100%);
-    color:var(--ink);
-  }
-  .timeline-section .kicker,
-  .timeline-section h2.section-title{color:inherit;}
-  .timeline-section h2.section-title{color:#F4F1EA;}
-  .timeline{
-    position:relative;
-    margin-top:3rem;
-    padding-left:2.4rem;
-  }
-  .timeline::before{
-    content:"";
-    position:absolute;
-    left:0.4rem;
-    top:0.3rem;
-    bottom:0.3rem;
-    width:1px;
-    background:linear-gradient(180deg, rgba(237,234,227,0.5), rgba(18,32,28,0.4));
-  }
-  .milestone{
-    position:relative;
-    padding-bottom:3.2rem;
-  }
-  .milestone:last-child{padding-bottom:0;}
-  .milestone::before{
-    content:"";
-    position:absolute;
-    left:-2.4rem;
-    top:0.35rem;
-    width:9px;height:9px;
-    border-radius:50%;
-    background:var(--amber);
-    box-shadow:0 0 0 4px rgba(217,142,63,0.18);
-  }
-  .milestone .when{
-    font-size:0.78rem;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--amber);
-    font-weight:600;
-  }
-  .milestone h3{
-    font-size:1.4rem;
-    margin:0.3rem 0 0.5rem;
-    color:var(--paper);
-  }
-  .timeline-section .milestone h3{color:#F4F1EA;}
-  .milestone p{
-    color:var(--fog);
-    max-width:56ch;
-    font-size:1rem;
-  }
-  .timeline-section .milestone p{color:#3A4640;}
-  .milestone .placeholder{
-    font-style:italic;
-    color:rgba(217,142,63,0.85);
-  }
+  .case{margin:1.6rem 0;padding:1.3rem 1.5rem;background:var(--panel);border-radius:3px;border:1px solid var(--rule);}
+  .case .label{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:0.5rem;}
+  .case p{color:var(--fog);font-size:0.98rem;margin:0;font-style:italic;}
 
-  /* SCIENCE */
-  .science{background:var(--bg-bottom);color:var(--ink);}
-  .science .kicker{color:#4A6357;}
-  .science h2.section-title{color:var(--ink);}
-  details{
-    border-top:1px solid rgba(18,32,28,0.14);
-    padding:1.2rem 0;
-  }
-  details:last-of-type{border-bottom:1px solid rgba(18,32,28,0.14);}
-  summary{
-    cursor:pointer;
-    font-family:'Newsreader',serif;
-    font-size:1.15rem;
-    font-weight:500;
-    list-style:none;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  summary::-webkit-details-marker{display:none;}
-  summary::after{
-    content:"+";
-    font-size:1.4rem;
-    color:#4A6357;
-    transition:transform 0.2s ease;
-  }
-  details[open] summary::after{transform:rotate(45deg);}
-  details p{color:#3A4640;margin:0.9rem 0 0.2rem;max-width:60ch;}
-  details .src{font-size:0.85rem;color:#6B7A72;margin-top:0.6rem;}
+  ul.symptoms{padding-left:1.1rem;color:var(--fog);}
+  ul.symptoms li{margin-bottom:0.5rem;max-width:60ch;}
+  ul.symptoms strong{color:var(--paper);}
 
-  /* SOURCES */
-  .sources{background:var(--bg-bottom);color:var(--ink);padding-top:0;}
-  .sources h2.section-title{color:var(--ink);}
-  .sources .kicker{color:#4A6357;}
-  .source-item{
-    padding:1.1rem 0;
-    border-top:1px solid rgba(18,32,28,0.14);
-  }
-  .source-item:last-child{border-bottom:1px solid rgba(18,32,28,0.14);}
-  .source-item .concept{font-weight:600;font-size:1rem;color:var(--ink);}
-  .source-item .cite{
-    font-size:0.9rem;color:#4A6357;font-style:italic;margin-top:0.3rem;
-  }
+  .care-note{margin-top:1.6rem;padding:1rem 1.3rem;background:rgba(217,142,63,0.08);border:1px solid rgba(217,142,63,0.35);border-radius:3px;font-size:0.95rem;color:var(--paper);}
+  .care-note strong{color:var(--amber);}
 
-  footer{
-    background:var(--bg-bottom);color:#6B7A72;
-    padding:3rem 0 4rem;font-size:0.85rem;
-  }
-  footer a{color:#4A6357;}
+  .condition-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.4rem;}
+  @media(max-width:640px){.condition-grid{grid-template-columns:1fr;}}
+  .condition{background:var(--panel);border:1px solid var(--rule);border-radius:3px;padding:1.2rem 1.3rem;}
+  .condition h3{margin-top:0;font-size:1.05rem;}
+  .condition p{color:var(--fog);font-size:0.94rem;margin:0;}
 
-  @media (max-width:600px){
-    .timeline{padding-left:1.8rem;}
-    .milestone::before{left:-1.8rem;}
-  }
+  .tx-table{width:100%;border-collapse:collapse;margin-top:1.2rem;font-size:0.92rem;}
+  .tx-table th{text-align:left;color:var(--sage);font-weight:600;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;padding:0.6rem 0.8rem 0.6rem 0;border-bottom:1px solid var(--rule);}
+  .tx-table td{padding:0.8rem 0.8rem 0.8rem 0;border-bottom:1px solid var(--rule);color:var(--fog);vertical-align:top;}
+  .tx-table td:first-child{color:var(--paper);font-weight:500;white-space:nowrap;}
 
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    details, .milestone::before{transition:none;}
-  }
+  .sources .source-item{padding:1rem 0;border-top:1px solid var(--rule);}
+  .sources .source-item:last-child{border-bottom:1px solid var(--rule);}
+  .sources .concept{font-weight:600;color:var(--paper);}
+  .sources .cite{font-size:0.9rem;color:var(--fog);font-style:italic;margin-top:0.3rem;}
+  .sources h3{color:var(--sage);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin:2rem 0 0.4rem;}
+
+  footer{padding:3rem 0 4rem;color:var(--fog);font-size:0.85rem;}
+  footer .crisis{margin-top:1.2rem;padding:1.2rem 1.4rem;background:var(--panel);border-radius:3px;border:1px solid var(--rule);}
+  footer .crisis strong{color:var(--paper);}
+  footer .crisis + .crisis{margin-top:0.8rem;}
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
 </style>
 </head>
 <body>
 
 <header class="hero wrap">
-  <div class="eyebrow">A quit journey — day by day</div>
-  <h1>Clearing</h1>
+  <div class="eyebrow">A quitting guide, grounded in the research</div>
+  <h1>Quitting THC isn't the same experience for everyone — here's why</h1>
   <p class="lede">
-    A record of quitting weed after years of daily use — not a how-to,
-    just what actually happened, week by week, and the biology behind why it felt the way it did.
+    Why heavy cannabis use is so hard to stop, why it hits some people much harder than others,
+    and what the evidence actually says helps. Written for general education, not diagnosis —
+    no personal details, just the literature.
   </p>
-  <div class="counter">
-    <span class="num">Day 1</span>
-    <span class="label">— edit this to your current count</span>
+  <div class="disclaimer">
+    This is educational content, not medical advice. If you're in withdrawal right now and it
+    feels unmanageable, or you're experiencing paranoia or psychosis, contact a doctor or the
+    resources at the bottom of this page — today, not after you finish reading.
   </div>
-  <p class="edit-note">Replace "Day 1" above with your real day count each time you update the site.</p>
 </header>
 
-<section class="why wrap">
-  <div class="kicker">Why this exists</div>
-  <h2 class="section-title">The short version</h2>
+<nav class="toc wrap">
+  <ul>
+    <li><a href="#withdrawal">Withdrawal</a></li>
+    <li><a href="#why-medicate">Why people self-medicate</a></li>
+    <li><a href="#conditions">Why it's harder for some</a></li>
+    <li><a href="#psychosis">Paranoia & psychosis</a></li>
+    <li><a href="#treatment">What actually helps</a></li>
+    <li><a href="#repair">Physical recovery</a></li>
+    <li><a href="#lapse">A single slip</a></li>
+    <li><a href="#relationships">Relationships</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+
+<section class="wrap" id="withdrawal">
+  <div class="kicker">The basics</div>
+  <h2>Cannabis withdrawal is real and clinically recognized</h2>
   <p>
-    [Write a few sentences here about why you're quitting and why you're documenting it publicly.
-    Keep it honest — this section sets the tone for everything after it.]
+    Cannabis withdrawal syndrome was formally added to the DSM-5 in 2013. It's not "just in your
+    head" — it's a diagnosable, physiological withdrawal syndrome, similar in structure to
+    withdrawal from other substances, just generally less medically dangerous than alcohol or
+    benzodiazepine withdrawal.
   </p>
-  <blockquote>
-    "[Optional: a single line that captures where your head is right now — a quote to yourself.]"
-  </blockquote>
-  <p>
-    This isn't medical advice, and it isn't a script anyone else should follow exactly.
-    It's one nervous system's account of recalibrating.
+  <div class="stat-row">
+    <div class="stat"><div class="n">12.1%</div><div class="l">of frequent users experience a diagnosable withdrawal syndrome</div></div>
+    <div class="stat"><div class="n">76%</div><div class="l">report anxiety/nervousness as a withdrawal symptom, the most common</div></div>
+    <div class="stat"><div class="n">~2 wks</div><div class="l">typical time for most withdrawal symptoms to resolve</div></div>
+  </div>
+  <ul class="symptoms">
+    <li><strong>Onset:</strong> begins within 24 hours of stopping, peaks around days 2–6.</li>
+    <li><strong>Common symptoms:</strong> anxiety, irritability and hostility, sleep disruption and vivid unpleasant dreams, decreased appetite, restlessness, and depressed mood.</li>
+    <li><strong>Less common but reported:</strong> headaches, sweating, nausea, and stomach discomfort.</li>
+    <li><strong>Resolution:</strong> most symptoms fade by about two weeks, though motivation and concentration can lag longer as cannabinoid receptors continue rebuilding over several weeks.</li>
+  </ul>
+  <p class="muted">
+    Withdrawal severity tracks with how heavy and how long the use was — someone with two decades
+    of daily use should expect a harder and possibly longer withdrawal than someone quitting after
+    occasional use for a year.
   </p>
 </section>
 
-<section class="timeline-section">
-  <div class="wrap">
-    <div class="kicker">The path</div>
-    <h2 class="section-title">Timeline</h2>
+<section class="wrap" id="why-medicate">
+  <div class="kicker">The pattern underneath</div>
+  <h2>Why people reach for it in the first place</h2>
+  <p>
+    The self-medication hypothesis, first proposed in addiction research in the 1980s, argues that
+    people don't typically become dependent on a substance chasing euphoria — they reach for
+    whatever seems to relieve a specific, painful deficit: anxiety, insomnia, sensory overload,
+    social discomfort, low motivation, or emotional flatness. Recent survey data backs this up
+    directly: <strong>76% of hazardous cannabis users report using it specifically to reduce
+    distress</strong> — anxiety, depression, pain, loneliness, social discomfort, or difficulty
+    concentrating — not for recreational effect.
+  </p>
+  <p>
+    This matters because it changes what quitting actually requires. If cannabis is functioning as
+    an unofficial treatment for an underlying condition, then stopping without addressing that
+    condition often means the original problem returns in full force right as withdrawal is also
+    peaking — a much harder combination than withdrawal alone.
+  </p>
+</section>
 
-    <div class="timeline">
-
-      <div class="milestone">
-        <div class="when">Day 1</div>
-        <h3>The decision</h3>
-        <p class="placeholder">[What made today the day. What you noticed in your body and mind at the start.]</p>
-      </div>
-
-      <div class="milestone">
-        <div class="when">Days 2–7</div>
-        <h3>The first week</h3>
-        <p class="placeholder">[Sleep, appetite, mood swings, irritability, cravings — whatever showed up.]</p>
-      </div>
-
-      <div class="milestone">
-        <div class="when">Weeks 2–4</div>
-        <h3>The brownout</h3>
-        <p class="placeholder">[This is usually the hardest stretch — flat affect, low motivation, short temper. Write what it actually looked like day to day.]</p>
-      </div>
-
-      <div class="milestone">
-        <div class="when">Month 2</div>
-        <h3>First signs of clearing</h3>
-        <p class="placeholder">[Any moments where things felt lighter, sharper, more present — even briefly.]</p>
-      </div>
-
-      <div class="milestone">
-        <div class="when">Ongoing</div>
-        <h3>Where things stand now</h3>
-        <p class="placeholder">[Keep adding milestones here as time passes. Copy this block for each new entry.]</p>
-      </div>
-
+<section class="wrap" id="conditions">
+  <div class="kicker">Why severity varies</div>
+  <h2>It's genuinely harder for some conditions than others</h2>
+  <p>
+    Several conditions involve dopamine and sensory-processing differences that make cannabis
+    unusually appealing to self-medicate with — and make withdrawal correspondingly rougher, since
+    the substance was doing more functional work for that person.
+  </p>
+  <div class="condition-grid">
+    <div class="condition">
+      <h3>ADHD</h3>
+      <p>
+        Up to 75% of adults with ADHD report lifetime cannabis use. Baseline dopamine and
+        norepinephrine underproduction in ADHD overlaps with cannabis's dopamine effects, and many
+        users report it easing restlessness, irritability, and stimulant medication side effects —
+        though it also measurably worsens attention and memory with regular use, and there's no
+        clinical evidence supporting cannabis as an ADHD treatment.
+      </p>
+    </div>
+    <div class="condition">
+      <h3>Autism spectrum</h3>
+      <p>
+        Many autistic adults report cannabis reduces sensory overload, anxiety, and shutdowns —
+        one study found self-reported symptom severity dropping substantially after use. Evidence
+        remains preliminary and inconsistent, but the sensory-relief pattern is one of the most
+        commonly self-reported reasons for use in this population.
+      </p>
+    </div>
+    <div class="condition">
+      <h3>Depression & anxiety</h3>
+      <p>
+        Cannabis can blunt anhedonia and anxiety short-term, which is exactly why it's so
+        reinforcing — but regular use is associated with worsening depressive symptoms over time,
+        creating a cycle where the "relief" itself feeds the condition it's numbing.
+      </p>
+    </div>
+    <div class="condition">
+      <h3>Schizotypal / psychosis-spectrum traits</h3>
+      <p>
+        Reduced prefrontal dopamine availability in this profile can produce chronic apathy and
+        social discomfort that cannabis temporarily eases — but this same population carries
+        elevated risk for cannabis-triggered paranoia and psychosis, making the trade-off
+        considerably higher-stakes than for other groups.
+      </p>
     </div>
   </div>
-</section>
-
-<section class="science wrap">
-  <div class="kicker">Grounding it</div>
-  <h2 class="section-title">What's actually happening</h2>
-  <p style="color:#3A4640;max-width:60ch;">
-    The day-to-day experience above has a physiological basis. These are plain-language
-    summaries of the mechanisms involved, each backed by a real source below.
+  <p class="muted" style="margin-top:1.2rem;">
+    None of this means someone in these groups can't quit, or that quitting isn't worth it — it
+    means withdrawal alone often isn't the whole obstacle, and treating the underlying condition
+    alongside quitting tends to matter more here than for people without one of these profiles.
   </p>
-
-  <details open>
-    <summary>Why the first month feels so flat</summary>
-    <p>
-      Regular heavy use leads the brain to reduce the number of CB1 receptors it keeps
-      active on the surface of neurons. Once use stops, there's a real gap before those
-      receptors are rebuilt — commonly a couple of weeks to about a month — which shows up
-      as low motivation, blunted mood, and a general sense of static.
-    </p>
-    <div class="src">Source: Hirvonen et al., 2012, Molecular Psychiatry — see Sources below.</div>
-  </details>
-
-  <details>
-    <summary>Why concentration and memory feel foggy</summary>
-    <p>
-      THC dampens activity in the prefrontal cortex, the region responsible for holding
-      several pieces of information in mind at once and tracking time accurately. That's
-      part of why heavy use is linked to memory lapses and a distorted sense of how fast
-      time is passing — and why that fog can linger while the system recalibrates after quitting.
-    </p>
-    <div class="src">Source: D'Souza et al., 2004, Neuropsychopharmacology — see Sources below.</div>
-  </details>
-
-  <details>
-    <summary>Why cravings spike hardest right when you're doing well</summary>
-    <p>
-      In behavioral terms, this is a well-documented pattern: removing a long-standing habit
-      often produces a short, intense spike in the urge to do it again before that urge fades
-      for good. Expecting the spike makes it easier to ride out.
-    </p>
-    <div class="src">Source: Skinner, 1938, The Behavior of Organisms — see Sources below.</div>
-  </details>
-
-  <details>
-    <summary>What actually speeds up feeling normal again</summary>
-    <p>
-      Two levers with real evidence behind them: sustained aerobic movement, which promotes
-      a protein (BDNF) involved in rebuilding neural connections, and brief cold exposure,
-      which shifts the nervous system's focus away from craving and toward basic regulation.
-      Neither is a shortcut, but both measurably help.
-    </p>
-    <div class="src">Sources: Cotman & Berchtold, 2002; Srámek et al., 2000 — see Sources below.</div>
-  </details>
-
 </section>
 
-<section class="sources wrap">
+<section class="wrap" id="psychosis">
+  <div class="kicker">When it goes further</div>
+  <h2>Paranoia and psychosis</h2>
+  <p>
+    Cannabis, especially in high doses or with heavy long-term use, can trigger or intensify
+    paranoia and, in some cases, psychosis — a state where dopamine misfires and attaches
+    outsized significance to ordinary, irrelevant details, which the brain then works to explain
+    with a story: a delusion. This risk is elevated in people with schizotypal or
+    schizophrenia-spectrum profiles, since their dopamine systems already run less predictably.
+  </p>
+  <div class="care-note">
+    <strong>This isn't a variant worth romanticizing.</strong> Paranoia and psychosis are
+    frightening, disorienting, and genuinely dangerous — they impair judgment and safety, not
+    just mood. Cognitive-behavioral therapy specifically adapted for cannabis cessation has shown
+    real benefit for people with psychosis history: in one trial, patients who received it
+    reduced both cannabis use and psychotic symptoms more than standard care. If someone is
+    experiencing ongoing paranoia or a break from reality, that's a same-week conversation with a
+    doctor, not something to wait out alone.
+  </div>
+</section>
+
+<section class="wrap" id="treatment">
+  <div class="kicker">What actually works</div>
+  <h2>Evidence-based treatment options</h2>
+  <p>
+    Cannabis use disorder is treatable, but honestly: abstinence rates with even the
+    best-supported treatments hover around 20%, and relapse within 9 months is common. That's not
+    a reason to skip treatment — it's a reason to expect this to take more than one attempt, and
+    to use methods with actual evidence behind them rather than willpower alone.
+  </p>
+  <table class="tx-table">
+    <tr><th>Approach</th><th>What it is</th></tr>
+    <tr><td>CBT</td><td>Structured therapy targeting the thoughts and triggers driving use; strongest evidence base, especially combined with other approaches below.</td></tr>
+    <tr><td>Motivational enhancement (MET)</td><td>Short, goal-focused sessions building internal motivation to change; effective early on or for those still ambivalent, less durable alone.</td></tr>
+    <tr><td>Contingency management</td><td>Small financial incentives tied to verified abstinence (e.g. clean urine tests); moderate-to-high quality evidence, especially in the short term.</td></tr>
+    <tr><td>MET + CBT + contingency management combined</td><td>The best-supported combination in current research — outperforms any single approach alone, especially past one month of treatment.</td></tr>
+    <tr><td>Medication (investigational)</td><td>No FDA-approved medication for cannabis withdrawal yet. Early trials show possible benefit from N-acetylcysteine (particularly in youth), gabapentin, and CBD (400–800mg/day) for reducing use or easing withdrawal — none are established standard-of-care.</td></tr>
+  </table>
+  <p class="muted" style="margin-top:1.2rem;">
+    Practical note: these therapies exist specifically because willpower and information alone
+    have a modest track record. Structured support — a therapist, a program, even a
+    contingency-management app — meaningfully outperforms trying to do it entirely solo.
+  </p>
+</section>
+
+<section class="wrap" id="repair">
+  <div class="kicker">Recovery</div>
+  <h2>What speeds up the physical rebuild</h2>
+  <p>
+    Heavy, long-term cannabis use leads the brain to reduce its own cannabinoid (CB1) receptors.
+    Recovery of those receptors — and the motivation and clarity that come back with them — takes
+    roughly two to four weeks of abstinence. Two mechanisms with real evidence behind them can
+    help that process along: sustained aerobic exercise promotes BDNF, a protein involved in
+    rebuilding neural connections, and brief cold exposure shifts the nervous system's focus away
+    from craving toward basic regulation. Neither is instant, and neither replaces clinical
+    treatment for an underlying condition — but both measurably help the physical side.
+  </p>
+</section>
+
+<section class="wrap" id="lapse">
+  <div class="kicker">A single slip</div>
+  <h2>Why one lapse doesn't erase progress</h2>
+  <p>
+    After a period of abstinence, cannabinoid receptors begin rebuilding, and the liver's
+    metabolic pathway for THC becomes more efficient at clearing it. That has a direct consequence
+    for what happens if someone uses again after a short break.
+  </p>
+  <ul class="symptoms">
+    <li><strong>A single, low-dose use:</strong> with fewer receptors to bind to and a liver that clears THC quickly, a small amount is metabolized fast and mostly stays in the bloodstream rather than being stored. The disruption tends to be brief.</li>
+    <li><strong>Repeated or high-dose use:</strong> once the liver's capacity is exceeded, the excess is stored in fat tissue and leaks back into the bloodstream over weeks — this is what actually restarts the withdrawal clock.</li>
+  </ul>
+  <p>
+    A single slip, immediately followed by removing access to more of the substance, is a
+    fundamentally different event from an extended return to use. What separates them isn't the
+    moment of the slip — it's what happens in the hours right after it.
+  </p>
+  <div class="care-note">
+    <strong>The harder part is usually the guilt, not the biology.</strong> Shame after a lapse
+    often does more damage than the lapse itself, because it can talk someone into treating "I
+    slipped once" as "I've already failed." If a lapse happens, getting rid of remaining supply
+    and telling one trusted person does more to prevent it becoming a pattern than willpower alone.
+  </div>
+</section>
+
+<section class="wrap" id="relationships">
+  <div class="kicker">The relationship</div>
+  <h2>How this affects people around them</h2>
+  <p>
+    A person cycling through self-medication, withdrawal, and occasional paranoia often becomes
+    harder to reach for the people close to them — flattened affect can look like indifference,
+    withdrawal can look like rejection, and psychotic episodes can badly damage trust, even when
+    everyone involved is doing their best. It's common for the person themselves to feel intense
+    guilt once they're stable enough to see the impact clearly, sometimes describing it as harder
+    than the physical withdrawal itself.
+  </p>
+  <p class="muted">
+    Family or couples counseling, separate from individual treatment, is often what actually
+    repairs this — guilt alone doesn't rebuild trust, and neither does willpower.
+  </p>
+</section>
+
+<section class="wrap sources" id="sources">
   <div class="kicker">References</div>
-  <h2 class="section-title">Sources</h2>
+  <h2>Sources</h2>
 
-  <div class="source-item">
-    <div class="concept">Self-medication and substance use</div>
-    <div class="cite">Khantzian, E. J. (1985). The self-medication hypothesis of addictive disorders: focus on heroin and cocaine dependence. <em>American Journal of Psychiatry</em>, 142(11), 1259–1264.</div>
-  </div>
+  <h3>Withdrawal & mechanism</h3>
+  <div class="source-item"><div class="concept">Cannabis withdrawal syndrome, prevalence in U.S. adults</div><div class="cite">Livne, O., et al. (2019). DSM-5 cannabis withdrawal syndrome: Demographic and clinical correlates in U.S. adults. <em>Drug and Alcohol Dependence</em>, 195, 170–177.</div></div>
+  <div class="source-item"><div class="concept">Cannabis withdrawal syndrome time course</div><div class="cite">Bahji, A., et al. Cannabis withdrawal syndrome: review and clinical time-course data, discussed in <em>American Journal of Psychiatry</em> and Psychiatric Times clinical reviews (2020–2026).</div></div>
+  <div class="source-item"><div class="concept">Self-medication hypothesis</div><div class="cite">Khantzian, E. J. (1985). The self-medication hypothesis of addictive disorders: focus on heroin and cocaine dependence. <em>American Journal of Psychiatry</em>, 142(11), 1259–1264.</div></div>
+  <div class="source-item"><div class="concept">Self-medication in hazardous cannabis users</div><div class="cite">Bujarski, S. J., et al. Predicting self-medication with cannabis in young adults with hazardous cannabis use. <em>Cannabis</em> / PMC8834899.</div></div>
+  <div class="source-item"><div class="concept">CB1 receptor downregulation and recovery</div><div class="cite">Hirvonen, J., et al. (2012). Reversible and regionally selective downregulation of brain cannabinoid CB1 receptors in chronic daily cannabis smokers. <em>Molecular Psychiatry</em>, 17(6), 642–649.</div></div>
+  <div class="source-item"><div class="concept">THC effects on working memory and psychosis-like symptoms</div><div class="cite">D'Souza, D. C., et al. (2004). The psychotomimetic effects of intravenous delta-9-tetrahydrocannabinol in healthy individuals. <em>Neuropsychopharmacology</em>, 29(8), 1558–1572.</div></div>
+  <div class="source-item"><div class="concept">Cannabinoid effects on memory, broadly</div><div class="cite">Ranganathan, M., & D'Souza, D. C. (2006). The acute effects of cannabinoids on memory in humans: a review. <em>Psychopharmacology</em>, 188(4), 425–444.</div></div>
 
-  <div class="source-item">
-    <div class="concept">Extinction bursts in behavior change</div>
-    <div class="cite">Skinner, B. F. (1938). <em>The Behavior of Organisms: An Experimental Analysis</em>. Appleton-Century.</div>
-  </div>
+  <h3>Condition-specific patterns</h3>
+  <div class="source-item"><div class="concept">ADHD and cannabis self-medication</div><div class="cite">Stueber, A., & Cuttler, C. (2022). Self-reported effects of cannabis on ADHD symptoms, medication side effects, and executive dysfunction. <em>Journal of Attention Disorders</em>.</div></div>
+  <div class="source-item"><div class="concept">ADHD, dopamine, and cannabis self-medication mechanism</div><div class="cite">CHADD (2022). ADHD & recreational marijuana: what's the attraction?</div></div>
+  <div class="source-item"><div class="concept">Autism and self-reported symptom relief from cannabis</div><div class="cite">Acute effects of cannabis on core and co-occurring features associated with autism spectrum disorder in adults. <em>Scientific Reports</em> (2025).</div></div>
+  <div class="source-item"><div class="concept">Prefrontal dopamine and schizophrenia-spectrum conditions</div><div class="cite">Weinberger, D. R. (1988). Schizophrenia and the frontal lobe. <em>Trends in Neurosciences</em>, 11(8), 367–370.</div></div>
+  <div class="source-item"><div class="concept">Dopamine reactivity and addiction severity in cannabis users</div><div class="cite">Volkow, N. D., et al. (2014). Decreased dopamine brain reactivity in marijuana abusers is associated with negative emotionality and addiction severity. <em>PNAS</em>, 111(30), E3149–E3156.</div></div>
 
-  <div class="source-item">
-    <div class="concept">Prefrontal cortex function</div>
-    <div class="cite">Weinberger, D. R. (1988). Schizophrenia and the frontal lobe. <em>Trends in Neurosciences</em>, 11(8), 367–370.</div>
-  </div>
+  <h3>Psychosis mechanism</h3>
+  <div class="source-item"><div class="concept">Aberrant salience model of psychosis</div><div class="cite">Kapur, S. (2003). Psychosis as a state of aberrant salience. <em>American Journal of Psychiatry</em>, 160(1), 13–23.</div></div>
+  <div class="source-item"><div class="concept">CBT for cannabis cessation in first-episode psychosis</div><div class="cite">Randomized controlled trial of CBT-CC vs. treatment as usual in first-episode psychosis cannabis users. <em>PMC9224093</em> (2022).</div></div>
 
-  <div class="source-item">
-    <div class="concept">Dopamine and salience</div>
-    <div class="cite">Kapur, S. (2003). Psychosis as a state of aberrant salience: a framework linking biology, phenomenology, and pharmacology in schizophrenia. <em>American Journal of Psychiatry</em>, 160(1), 13–23.</div>
-  </div>
+  <h3>Treatment evidence</h3>
+  <div class="source-item"><div class="concept">Current treatment landscape and outcomes for cannabis use disorder</div><div class="cite">Current Treatments for Cannabis Use Disorder. <em>Psychiatric Times</em> (2026).</div></div>
+  <div class="source-item"><div class="concept">Combined CBT/MET/contingency management, computer-delivered vs. in-person</div><div class="cite">Budney, A. J., et al. (2015). Computer-assisted behavioral therapy and contingency management for cannabis use disorder. <em>Psychology of Addictive Behaviors</em>.</div></div>
+  <div class="source-item"><div class="concept">Contingency management meta-analysis</div><div class="cite">Contingency Management for Cannabis Use Disorder Treatment: a systematic review and meta-analysis. <em>European Addiction Research</em>, 30(5), 321 (2024).</div></div>
+  <div class="source-item"><div class="concept">N-acetylcysteine for youth cannabis use disorder</div><div class="cite">N-acetylcysteine for youth cannabis use disorder: randomized controlled trial main findings. <em>PMC11914066</em>.</div></div>
 
-  <div class="source-item">
-    <div class="concept">CB1 receptor downregulation and recovery</div>
-    <div class="cite">Hirvonen, J., et al. (2012). Reversible and regionally selective downregulation of brain cannabinoid CB1 receptors in chronic daily cannabis smokers. <em>Molecular Psychiatry</em>, 17(6), 642–649.</div>
-  </div>
-
-  <div class="source-item">
-    <div class="concept">THC's effect on working memory and time perception</div>
-    <div class="cite">D'Souza, D. C., et al. (2004). The psychotomimetic effects of intravenous delta-9-tetrahydrocannabinol in healthy individuals: implications for psychosis. <em>Neuropsychopharmacology</em>, 29(8), 1558–1572.</div>
-  </div>
-
-  <div class="source-item">
-    <div class="concept">Exercise and neuroplasticity (BDNF)</div>
-    <div class="cite">Cotman, C. W., & Berchtold, N. C. (2002). Exercise: a behavioral intervention to enhance brain health and plasticity. <em>Trends in Neurosciences</em>, 25(6), 295–301.</div>
-  </div>
-
-  <div class="source-item">
-    <div class="concept">Cold exposure and nervous system regulation</div>
-    <div class="cite">Srámek, P., et al. (2000). Human physiological responses to immersion into water of different temperatures. <em>European Journal of Applied Physiology</em>, 81(5), 436–442.</div>
-  </div>
-
+  <h3>Behavioral mechanics & physical recovery</h3>
+  <div class="source-item"><div class="concept">Extinction bursts in behavior change</div><div class="cite">Skinner, B. F. (1938). <em>The Behavior of Organisms: An Experimental Analysis</em>. Appleton-Century.</div></div>
+  <div class="source-item"><div class="concept">Exercise and neuroplasticity (BDNF)</div><div class="cite">Cotman, C. W., & Berchtold, N. C. (2002). Exercise: a behavioral intervention to enhance brain health and plasticity. <em>Trends in Neurosciences</em>, 25(6), 295–301.</div></div>
+  <div class="source-item"><div class="concept">Cold exposure and nervous system regulation</div><div class="cite">Srámek, P., et al. (2000). Human physiological responses to immersion into water of different temperatures. <em>European Journal of Applied Physiology</em>, 81(5), 436–442.</div></div>
 </section>
 
 <footer class="wrap">
-  <p>Updated as I go. Not medical advice — if you're struggling, talk to a doctor or counselor who knows your situation.</p>
+  <p>Written for general education. Not a substitute for diagnosis or treatment from a licensed clinician. Also keeping a <a href="journal.html">personal day-by-day log</a> alongside this.</p>
+  <div class="crisis">
+    <strong>Looking for treatment?</strong> SAMHSA's National Helpline — 1-800-662-4357 — is free,
+    confidential, 24/7, and can refer you to local treatment programs, therapists, and support
+    groups. You can also search <a href="https://findtreatment.gov" target="_blank" rel="noopener">findtreatment.gov</a>.
+  </div>
+  <div class="crisis">
+    <strong>In crisis right now?</strong> — ongoing paranoia, psychosis, or withdrawal that feels
+    unmanageable — call or text <strong>988</strong> (Suicide & Crisis Lifeline, US). You don't
+    need a clean explanation of what's happening to ask for help.
+  </div>
 </footer>
 
 </body>
