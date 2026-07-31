@@ -878,6 +878,9 @@
     unmanageable — call or text <strong>988</strong> (Suicide & Crisis Lifeline, US). You don't
     need a clean explanation of what's happening to ask for help.
   </div>
+  <div class="visitor-count" id="visitor-count-wrap-footer" style="display:none; border-top:none; padding-top:0;">
+    <span class="num" id="visitor-count-num-footer">…</span> people have read this guide so far.
+  </div>
 </footer>
 
 <div id="consent-banner" class="hidden" role="dialog" aria-label="Cookie consent">
@@ -935,11 +938,22 @@
     .then(function(r){ return r.json(); })
     .then(function(data){
       if (data && typeof data.value === 'number') {
-        document.getElementById('visitor-count-num').textContent = data.value.toLocaleString();
-        document.getElementById('visitor-count-wrap').style.display = 'block';
+        var formatted = data.value.toLocaleString();
+        var topNum = document.getElementById('visitor-count-num');
+        var topWrap = document.getElementById('visitor-count-wrap');
+        if (topNum && topWrap) {
+          topNum.textContent = formatted;
+          topWrap.style.display = 'block';
+        }
+        var footNum = document.getElementById('visitor-count-num-footer');
+        var footWrap = document.getElementById('visitor-count-wrap-footer');
+        if (footNum && footWrap) {
+          footNum.textContent = formatted;
+          footWrap.style.display = 'block';
+        }
       }
     })
-    .catch(function(){ /* fail silently, counter just stays hidden */ });
+    .catch(function(){ /* fail silently, counters just stay hidden */ });
 })();
 </script>
 
