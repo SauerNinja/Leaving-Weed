@@ -23,6 +23,7 @@
 <meta name="author" content="Anonymous">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://sauerninja.github.io/quit-thc-leave/index.html">
+<meta name="theme-color" content="#12201C">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -59,6 +60,8 @@
   "description": "A sourced guide to THC withdrawal, why severity varies by condition, and evidence-based treatment options.",
   "author": { "@type": "Person", "name": "Anonymous" },
   "mainEntityOfPage": "https://sauerninja.github.io/quit-thc-leave/index.html",
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-07-31",
   "articleSection": ["Withdrawal", "Sleep", "Tapering vs cold turkey", "Nicotine co-use", "Self-medication", "Comorbid conditions", "Costs of heavy use", "Cannabinoid hyperemesis syndrome", "Rising potency", "Psychosis risk", "Treatment", "Peer support", "Detection windows", "Recovery", "Benefits of quitting", "Relapse prevention"]
 }
 </script>
@@ -208,6 +211,20 @@
 
   .stat-row{display:flex;gap:1.6rem;flex-wrap:wrap;margin:1.4rem 0;}
   .stat{background:var(--panel);border:1px solid var(--rule);border-radius:3px;padding:1rem 1.2rem;min-width:150px;}
+
+  .not-alone{
+    margin-top:1.6rem; padding:1.4rem 1.6rem;
+    background:linear-gradient(135deg, rgba(127,168,143,0.1), rgba(217,142,63,0.06));
+    border:1px solid rgba(127,168,143,0.3); border-radius:4px;
+  }
+  .not-alone h2{font-size:1.3rem; margin:0 0 0.8rem; color:var(--paper);}
+  .not-alone .stat-row{margin:1rem 0 0.6rem;}
+  .not-alone .stat{background:rgba(18,32,28,0.4); min-width:130px;}
+  .visitor-count{
+    margin-top:1rem; padding-top:1rem; border-top:1px solid rgba(127,168,143,0.2);
+    font-size:0.85rem; color:var(--fog);
+  }
+  .visitor-count .num{color:var(--amber); font-weight:600; font-family:'Newsreader',serif;}
   .stat .n{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--amber);}
   .stat .l{font-size:0.8rem;color:var(--fog);margin-top:0.2rem;}
 
@@ -287,6 +304,27 @@
     This is educational content, not medical advice. If you're in withdrawal right now and it
     feels unmanageable, or you're experiencing paranoia or psychosis, contact a doctor or the
     resources at the bottom of this page — today, not after you finish reading.
+  </div>
+
+  <div class="not-alone">
+    <h2>You're not alone in this</h2>
+    <p style="color:var(--fog); margin:0 0 0.4rem;">
+      As of 2025 federal survey data, cannabis use at this scale is common — you're one of a very
+      large number of people navigating the exact same thing.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">61.6M</div><div class="l">Americans reported past-year cannabis use</div></div>
+      <div class="stat"><div class="n">21.4M</div><div class="l">used it daily or near-daily — more than reported daily alcohol or cigarette use</div></div>
+      <div class="stat"><div class="n">~19.3M</div><div class="l">met criteria for cannabis use disorder — the second most common substance use disorder after alcohol</div></div>
+    </div>
+    <p style="color:var(--fog); margin:0.6rem 0 0; font-size:0.92rem;">
+      Whatever this feels like right now — the withdrawal, the cravings, the guilt, the not
+      knowing if it'll work this time — millions of people are in it too, and a real number of
+      them come out the other side.
+    </p>
+    <div class="visitor-count" id="visitor-count-wrap" style="display:none;">
+      You're not the only one reading this either — <span class="num" id="visitor-count-num">…</span> page views on this guide so far.
+    </div>
   </div>
 </header>
 
@@ -819,6 +857,7 @@
   <div class="source-item"><div class="concept">Conflicting finding: no cognitive decline associated with cannabis use</div><div class="cite">Danish cohort study of 5,162 men followed 44 years, published in <em>Brain and Behavior</em>, discussed via NORML (2024).</div></div>
   <div class="source-item"><div class="concept">Respiratory symptom improvement after quitting</div><div class="cite">Hancox, R. J., et al. (2015). Effects of quitting cannabis on respiratory symptoms. <em>European Respiratory Journal</em>.</div></div>
   <div class="source-item"><div class="concept">Cannabis use disorder prevalence among users, and by age of first use</div><div class="cite">Widely cited NIDA/Anthony et al. prevalence estimates on the proportion of cannabis users who develop dependence.</div></div>
+  <div class="source-item"><div class="concept">Scale of cannabis use and use disorder in the U.S., 2025</div><div class="cite">2025 National Survey on Drug Use and Health (NSDUH), SAMHSA, reported via multiple outlets including Fox and High Times (2026): 61.6 million past-year users, 21.4 million daily/near-daily users, ~19.3 million meeting cannabis use disorder criteria.</div></div>
   <div class="source-item"><div class="concept">Benefits-of-quitting timeline, cognitive and respiratory</div><div class="cite">Benefits of Quitting Weed: Withdrawal, Sleep and Health Improvements. Back2Basics Recovery (2026), summarizing timeline data across clinical sources.</div></div>
 
   <h3>Behavioral mechanics & physical recovery</h3>
@@ -884,6 +923,23 @@
     applyConsent('essential');
     banner.classList.add('hidden');
   });
+})();
+</script>
+
+<!-- Honest page-view counter: real count from a public counting API, not fabricated.
+     If the service is unreachable, the counter stays hidden rather than showing a broken
+     or fake number. Namespace/key are unique to this site to avoid collisions. -->
+<script>
+(function(){
+  fetch('https://api.countapi.xyz/hit/leaving-weed-quit-thc-leave/pageviews')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if (data && typeof data.value === 'number') {
+        document.getElementById('visitor-count-num').textContent = data.value.toLocaleString();
+        document.getElementById('visitor-count-wrap').style.display = 'block';
+      }
+    })
+    .catch(function(){ /* fail silently, counter just stays hidden */ });
 })();
 </script>
 
