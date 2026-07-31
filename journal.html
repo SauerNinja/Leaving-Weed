@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) with Consent Mode: analytics blocked until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'denied'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q9H429JLD"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-3Q9H429JLD');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Track Your Own Quit Journey — Optional Journal Template</title>
 <meta name="description" content="An optional day-by-day journal template for anyone tracking their own quit, paired with the biology behind why each stage tends to feel the way it does.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://sauerninja.github.io/quit-thc-leave/journal.html">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="Track Your Own Quit Journey — Optional Journal Template">
 <meta property="og:description" content="A day-by-day journal template for anyone quitting, paired with the biology behind each stage.">
 <meta property="og:url" content="https://sauerninja.github.io/quit-thc-leave/journal.html">
+<meta property="og:image" content="https://sauerninja.github.io/quit-thc-leave/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -231,6 +252,32 @@
     html{scroll-behavior:auto;}
     details, .milestone::before{transition:none;}
   }
+
+  /* Cookie consent banner */
+  #consent-banner{
+    position:fixed; left:1rem; bottom:1rem; z-index:999;
+    max-width:340px;
+    background:var(--ink); border:1px solid var(--rule); border-radius:6px;
+    padding:0.85rem 1rem; display:flex; flex-direction:column; gap:0.7rem;
+    box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  }
+  #consent-banner p{
+    color:var(--fog); font-size:0.78rem; line-height:1.4; margin:0;
+  }
+  #consent-banner .consent-actions{display:flex; gap:0.5rem;}
+  #consent-banner button{
+    font-family:'Work Sans',sans-serif; font-size:0.76rem; font-weight:600;
+    padding:0.4rem 0.8rem; border-radius:3px; cursor:pointer; border:1px solid transparent;
+    flex:1;
+  }
+  #consent-accept-all{background:var(--amber); color:var(--ink); border-color:var(--amber);}
+  #consent-accept-all:hover{opacity:0.9;}
+  #consent-essential-only{background:transparent; color:var(--paper); border-color:var(--rule);}
+  #consent-essential-only:hover{border-color:var(--fog);}
+  #consent-banner.hidden{display:none;}
+  @media (max-width:500px){
+    #consent-banner{left:0.6rem; right:0.6rem; bottom:0.6rem; max-width:none;}
+  }
 </style>
 </head>
 <body>
@@ -263,6 +310,31 @@
   <p>
     This isn't medical advice, and it isn't a script anyone else should follow exactly.
     It's one nervous system's account of recalibrating.
+  </p>
+</section>
+
+<section class="wrap" style="padding:3.5rem 0;">
+  <div class="kicker">Optional structure</div>
+  <h2 class="section-title" style="font-size:1.5rem;">A daily check-in template</h2>
+  <p style="color:var(--fog);max-width:56ch;">
+    Some people find plain tracking easier than open-ended writing, especially on hard days.
+    Copy this list into each day's entry and just fill in short answers — no need to write
+    paragraphs if you don't feel like it.
+  </p>
+  <div class="case" style="font-style:normal;">
+    <div class="label" style="margin-bottom:0.8rem;">Copy this block per day</div>
+    <p style="font-style:normal;color:var(--paper);line-height:2;">
+      Sleep: went to bed ___ / woke up ___ / woke during the night? Y·N<br>
+      Craving today? Y·N — if yes, what time, and what was happening right before<br>
+      Did I use? Y·N<br>
+      Mood, one word: ___<br>
+      Anything that helped today: ___<br>
+      Anything I need tomorrow (rest, food, a call to someone, a doctor): ___
+    </p>
+  </div>
+  <p class="muted" style="margin-top:1rem;">
+    If several days in a row show no sleep, no appetite, or a mood word that worries you, that's
+    worth a call to a doctor — not just another journal entry.
   </p>
 </section>
 
@@ -408,7 +480,54 @@
 
 <footer class="wrap">
   <p>Updated as I go. Not medical advice — if you're struggling, talk to a doctor or counselor who knows your situation.</p>
+  <p><a href="index.html">← Back to the full guide</a> — withdrawal timeline, treatment options, and sources.</p>
 </footer>
+
+<div id="consent-banner" class="hidden" role="dialog" aria-label="Cookie consent">
+  <p>
+    This site uses Google Analytics to understand traffic. No personal or health information is
+    collected. Analytics is on by default — you can turn it off below if you'd rather not be tracked.
+  </p>
+  <div class="consent-actions">
+    <button id="consent-essential-only" type="button">Essential only</button>
+    <button id="consent-accept-all" type="button">Accept all</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'cookie-consent';
+  var banner = document.getElementById('consent-banner');
+  var saved = null;
+  try { saved = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+
+  function applyConsent(choice){
+    if (choice === 'all') {
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    } else {
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
+    }
+  }
+
+  if (saved === 'all' || saved === 'essential') {
+    applyConsent(saved);
+  } else {
+    banner.classList.remove('hidden');
+  }
+
+  document.getElementById('consent-accept-all').addEventListener('click', function(){
+    try { localStorage.setItem(STORAGE_KEY, 'all'); } catch(e) {}
+    applyConsent('all');
+    banner.classList.add('hidden');
+  });
+
+  document.getElementById('consent-essential-only').addEventListener('click', function(){
+    try { localStorage.setItem(STORAGE_KEY, 'essential'); } catch(e) {}
+    applyConsent('essential');
+    banner.classList.add('hidden');
+  });
+})();
+</script>
 
 </body>
 </html>

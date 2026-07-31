@@ -27,7 +27,7 @@ link directly to any section (each has an anchor, e.g. `index.html#treatment`).
 1. Push these files to the `sauerninja/quit-thc-leave` repo:
    ```bash
    git init
-   git add index.html journal.html README.md LICENSE robots.txt sitemap.xml
+   git add index.html journal.html README.md LICENSE robots.txt sitemap.xml favicon.ico favicon-16.png favicon-32.png apple-touch-icon.png icon-512.png og-image.png
    git commit -m "Initial site"
    git branch -M main
    git remote add origin https://github.com/sauerninja/quit-thc-leave.git
