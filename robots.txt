@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sauerninja.github.io/quit-thc-leave/sitemap.xml
+Sitemap: https://sauerninja.github.io/Leaving-Weed/sitemap.xml
