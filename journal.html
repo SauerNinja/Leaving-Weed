@@ -264,16 +264,12 @@
   #consent-banner p{
     color:var(--fog); font-size:0.78rem; line-height:1.4; margin:0;
   }
-  #consent-banner .consent-actions{display:flex; gap:0.5rem;}
   #consent-banner button{
     font-family:'Work Sans',sans-serif; font-size:0.76rem; font-weight:600;
     padding:0.4rem 0.8rem; border-radius:3px; cursor:pointer; border:1px solid transparent;
-    flex:1;
+    background:var(--amber); color:var(--ink); border-color:var(--amber); align-self:flex-end;
   }
-  #consent-accept-all{background:var(--amber); color:var(--ink); border-color:var(--amber);}
-  #consent-accept-all:hover{opacity:0.9;}
-  #consent-essential-only{background:transparent; color:var(--paper); border-color:var(--rule);}
-  #consent-essential-only:hover{border-color:var(--fog);}
+  #consent-banner button:hover{opacity:0.9;}
   #consent-banner.hidden{display:none;}
   @media (max-width:500px){
     #consent-banner{left:0.6rem; right:0.6rem; bottom:0.6rem; max-width:none;}
@@ -484,14 +480,8 @@
 </footer>
 
 <div id="consent-banner" class="hidden" role="dialog" aria-label="Cookie consent">
-  <p>
-    This site uses Google Analytics to understand traffic. No personal or health information is
-    collected. Analytics is on by default — you can turn it off below if you'd rather not be tracked.
-  </p>
-  <div class="consent-actions">
-    <button id="consent-essential-only" type="button">Essential only</button>
-    <button id="consent-accept-all" type="button">Accept all</button>
-  </div>
+  <p>This site uses analytics cookies to understand readership.</p>
+  <button id="consent-ok" type="button">OK</button>
 </div>
 
 <script>
@@ -501,29 +491,14 @@
   var saved = null;
   try { saved = localStorage.getItem(STORAGE_KEY); } catch(e) {}
 
-  function applyConsent(choice){
-    if (choice === 'all') {
-      gtag('consent', 'update', { 'analytics_storage': 'granted' });
-    } else {
-      gtag('consent', 'update', { 'analytics_storage': 'denied' });
-    }
-  }
+  gtag('consent', 'update', { 'analytics_storage': 'granted' });
 
-  if (saved === 'all' || saved === 'essential') {
-    applyConsent(saved);
-  } else {
+  if (saved !== 'ok') {
     banner.classList.remove('hidden');
   }
 
-  document.getElementById('consent-accept-all').addEventListener('click', function(){
-    try { localStorage.setItem(STORAGE_KEY, 'all'); } catch(e) {}
-    applyConsent('all');
-    banner.classList.add('hidden');
-  });
-
-  document.getElementById('consent-essential-only').addEventListener('click', function(){
-    try { localStorage.setItem(STORAGE_KEY, 'essential'); } catch(e) {}
-    applyConsent('essential');
+  document.getElementById('consent-ok').addEventListener('click', function(){
+    try { localStorage.setItem(STORAGE_KEY, 'ok'); } catch(e) {}
     banner.classList.add('hidden');
   });
 })();

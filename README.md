@@ -1,51 +1,65 @@
-# Quit THC — a sourced guide
+# Leaving Weed — a sourced guide to quitting THC
 
-An educational, non-personal resource on quitting cannabis: the real withdrawal
-timeline, why it hits certain conditions (ADHD, autism, depression, schizotypal
-traits) harder, evidence-based treatment, and how to recover from a single lapse
-without losing progress.
+**Live: [sauerninja.github.io/Leaving-Weed](https://sauerninja.github.io/Leaving-Weed/)**
 
-Live at: https://sauerninja.github.io/Leaving-Weed/
+A free, public, sourced guide to quitting cannabis — the real withdrawal
+timeline, why it hits some conditions and situations harder than others,
+evidence-based treatment, and how to recover from a single lapse without
+losing progress. Free to read, no diagnosis, no shame — just cited clinical
+literature, written in plain language.
+
+## What's covered
+
+- Withdrawal timeline, sleep, night sweats, brain fog, post-acute withdrawal (PAWS)
+- Tapering vs. cold turkey, quitting alongside nicotine
+- Why self-medication happens, and why it hits ADHD, autism, depression, and
+  schizotypal traits harder
+- The measurable costs of heavy long-term use, cannabinoid hyperemesis
+  syndrome (CHS), and why today's cannabis isn't the same drug as decades ago
+- The real history behind Reefer Madness — the propaganda, the racism, and
+  the one narrow thing it accidentally wasn't entirely wrong about
+- Paranoia and psychosis — treated as real risks, not romanticized
+- Evidence-based treatment (CBT, contingency management), free peer support
+  (Marijuana Anonymous, SMART Recovery)
+- THC detection windows, physical recovery, benefits-of-quitting timeline
+- A single slip vs. relapse, real-life situations (parenting, social circles,
+  substitution risk), and how this affects relationships
+
+Every claim is attributed inline with a full, checkable reference list at
+the bottom of the page. Share a link straight to any section — each one has
+its own anchor, e.g. `index.html#treatment`.
 
 ## Why this exists
 
-A public, sourced resource for anyone dealing with heavy cannabis use and trying to quit —
-grounded in real clinical literature instead of guesswork, shame, or vague advice.
+A public, sourced resource for anyone dealing with heavy cannabis use and
+trying to quit — grounded in real clinical literature instead of guesswork,
+shame, or vague advice.
 
 ## Files
-- `index.html` — **the main page.** General, sourced info on THC withdrawal, why severity varies, and what treatment actually works. This is what's meant to rank in search and get shared.
-- `journal.html` — an optional day-by-day journal template that any visitor could use to track their own quit (timeline, day counter). Not indexed by search engines; it's a tool, not a record of anyone in particular.
-- `404.html` — branded not-found page, shown if someone hits a broken or old link, with a way back to the guide.
-- `LICENSE` — MIT license
-- `robots.txt` / `sitemap.xml` — search engine crawling and indexing configuration
-- `.nojekyll` — an empty file that tells GitHub Pages to skip its default Jekyll build step, since this site doesn't need it. **Note:** it's a dotfile, so it won't show in a plain `ls` — use `ls -la` to confirm it's there, and make sure your file browser shows hidden files before pushing.
-- `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png`, `og-image.png` — site icon and social share image, in the sizes browsers and platforms expect.
 
-## Sources
-All claims on `index.html` are attributed inline, with a full reference list
-at the bottom — real, checkable clinical literature. Feel free to share the
-link directly to any section (each has an anchor, e.g. `index.html#treatment`).
-
-## Publishing to GitHub Pages
-1. Push these files to the `SauerNinja/Leaving-Weed` repo:
-   ```bash
-   git init
-   git add index.html journal.html 404.html README.md LICENSE robots.txt sitemap.xml .nojekyll favicon.ico favicon-16.png favicon-32.png apple-touch-icon.png icon-512.png og-image.png
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin https://github.com/SauerNinja/Leaving-Weed.git
-   git push -u origin main
-   ```
-2. Settings → Pages → Source: "Deploy from a branch," `main`, `/ (root)` → Save
-3. Live at `https://sauerninja.github.io/Leaving-Weed/`
-
-To post an update later: edit the file, then `git add`, `git commit -m "update"`, `git push`.
+| File | What it is |
+|---|---|
+| `index.html` | **The main page.** Everything above — this is what's meant to rank in search and get shared. |
+| `journal.html` | An optional day-by-day journal template anyone can use to track their own quit. Not indexed by search engines — it's a tool, not a record of any one person. |
+| `404.html` | Branded not-found page with a way back to the guide. |
+| `LICENSE` | MIT license. |
+| `robots.txt` / `sitemap.xml` | Search engine crawling and indexing config. |
+| `.nojekyll` | Empty file telling GitHub Pages to skip its default Jekyll build. |
+| `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png`, `og-image.png` | Site icon and social share image. |
+| `yandex_b5a6a56713970142.html` | One-time Yandex Webmaster site-ownership verification file. Safe to leave in place permanently. |
 
 ## License
+
 MIT — see `LICENSE`. Use, adapt, and redistribute freely, with attribution
 appreciated but not required.
 
 ## If you're reading this because it applies to you
+
 A website can explain mechanisms. It can't replace a doctor, a therapist, or
-a crisis line. If any part of this resonates and things feel unmanageable,
-please reach out to a professional, or in the US, call or text 988.
+a crisis line.
+
+- **Looking for treatment?** SAMHSA's National Helpline — 1-800-662-4357 —
+  free, confidential, 24/7. Or search [findtreatment.gov](https://findtreatment.gov).
+- **In crisis right now?** Call or text **988** (Suicide & Crisis Lifeline, US).
+
+You don't need a clean explanation of what's happening to ask for help.
