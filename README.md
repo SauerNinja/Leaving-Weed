@@ -1,5 +1,7 @@
 # Leaving Weed — a sourced guide to quitting THC
 
+![Leaving Weed](og-image.png)
+
 **Live: [sauerninja.github.io/Leaving-Weed](https://sauerninja.github.io/Leaving-Weed/)**
 
 A free, public, sourced guide to quitting cannabis — the real withdrawal

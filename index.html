@@ -59,9 +59,10 @@
   "headline": "Leaving Weed: The Withdrawal Timeline, Why It's Harder for Some, and What Actually Helps",
   "description": "A sourced guide to THC withdrawal, why severity varies by condition, and evidence-based treatment options.",
   "author": { "@type": "Person", "name": "Anonymous" },
+  "image": "https://sauerninja.github.io/Leaving-Weed/og-image.png",
   "mainEntityOfPage": "https://sauerninja.github.io/Leaving-Weed/index.html",
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-12",
+  "dateModified": "2026-08-13",
   "articleSection": ["Withdrawal", "Sleep", "Tapering vs cold turkey", "Nicotine co-use", "Self-medication", "Comorbid conditions", "Costs of heavy use", "Cannabinoid hyperemesis syndrome", "Rising potency", "Reefer Madness history", "Psychosis risk", "Treatment", "Peer support", "Detection windows", "Brain fog", "Night sweats", "Post-acute withdrawal", "Other commonly reported symptoms", "The moderation trap", "Recovery", "Benefits of quitting", "Relapse prevention", "Real-life situations"]
 }
 </script>
@@ -240,12 +241,36 @@
     },
     {
       "@type": "Question",
+      "name": "Why can't I quit weed until I'm ready?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is a well-established finding in addiction psychology, not just a saying. The stages of change model describes behavior change as moving through stages from not considering it to actively maintaining it, often cycling back before it sticks. A meta-analysis of over 8,000 psychotherapy patients found a person's readiness to change meaningfully predicts treatment outcomes, which is also why motivational interviewing, one of the most evidence-supported counseling approaches, works with a person's own ambivalence rather than trying to argue them into change."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What treatments actually work for quitting cannabis?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "The strongest evidence supports cognitive behavioral therapy, motivational enhancement therapy, and contingency management, especially combined. No medication is yet FDA-approved specifically for cannabis withdrawal, though N-acetylcysteine, gabapentin, and CBD have shown early promise in trials."
       }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to quit THC: your first week checklist",
+  "description": "A step-by-step checklist for the first week of quitting cannabis, covering method, environment, support, and safety planning.",
+  "step": [
+    { "@type": "HowToStep", "name": "Pick your method", "text": "Cold turkey for lighter or shorter-term use; tapering with support for heavy, long-term, or high-potency use." },
+    { "@type": "HowToStep", "name": "Set up your physical firewall", "text": "Get rid of remaining supply before you start, not after the first craving hits." },
+    { "@type": "HowToStep", "name": "Tell one person", "text": "Someone who will actually check in, not just someone you mention it to once." },
+    { "@type": "HowToStep", "name": "Plan for sleep specifically", "text": "Sleep is the most commonly reported hardest part of withdrawal, so plan for it before you're in the middle of it." },
+    { "@type": "HowToStep", "name": "Line up peer support before you need it", "text": "Free options include Marijuana Anonymous, SMART Recovery, and the r/leaves online community." },
+    { "@type": "HowToStep", "name": "Know your call-a-doctor list in advance", "text": "Decide in advance that ongoing paranoia or psychosis, persistent vomiting, or a mental health crisis are same-day calls, not wait-and-see situations." }
   ]
 }
 </script>
@@ -262,11 +287,36 @@
   a{color:var(--amber);}
   .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
 
-  header.hero{padding:5rem 0 3rem;border-bottom:1px solid var(--rule);}
+  header.hero{padding:4rem 0 3rem;border-bottom:1px solid var(--rule);}
+  .hero-image{
+    width:110px; height:110px; border-radius:14px; margin-bottom:1.6rem;
+    box-shadow:0 8px 30px rgba(0,0,0,0.35);
+  }
   .eyebrow{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);font-weight:500;}
   h1{font-size:clamp(2.1rem,5.5vw,3.1rem);font-weight:500;line-height:1.12;margin:0.4em 0 0.5em;max-width:20ch;}
   .lede{font-size:1.08rem;color:var(--fog);max-width:58ch;}
   .disclaimer{margin-top:1.8rem;padding:1rem 1.2rem;border-left:2px solid var(--amber);background:var(--panel);font-size:0.92rem;color:var(--fog);border-radius:2px;}
+
+  .tldr{margin-top:1.6rem;padding:1.3rem 1.5rem;background:rgba(127,168,143,0.07);border:1px solid rgba(127,168,143,0.25);border-radius:4px;}
+  .tldr .tldr-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--sage);font-weight:700;margin-bottom:0.6rem;}
+  .tldr p{color:var(--paper);font-size:0.95rem;margin:0;line-height:1.6;}
+  .tldr strong{color:var(--amber);}
+
+  .checklist{list-style:none;padding:0;margin:1.6rem 0;counter-reset:checklist-counter;}
+  .checklist li{
+    counter-increment:checklist-counter;
+    position:relative; padding:1rem 1rem 1rem 3.2rem;
+    background:var(--panel); border:1px solid var(--rule); border-radius:4px;
+    margin-bottom:0.7rem; color:var(--paper); font-size:0.95rem;
+  }
+  .checklist li::before{
+    content:counter(checklist-counter);
+    position:absolute; left:1rem; top:50%; transform:translateY(-50%);
+    width:1.7rem; height:1.7rem; border-radius:50%;
+    background:var(--amber); color:var(--bg); font-weight:700; font-size:0.85rem;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .checklist li strong{color:var(--sage);}
 
   nav.toc{padding:1.6rem 0;border-bottom:1px solid var(--rule);}
   nav.toc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:0.4rem 1.2rem;}
@@ -300,6 +350,29 @@
   .stat .n{font-family:'Newsreader',serif;font-size:1.7rem;color:var(--amber);}
   .stat .l{font-size:0.8rem;color:var(--fog);margin-top:0.2rem;}
 
+  /* Bar chart component */
+  .bar-chart{margin:1.6rem 0;padding:1.4rem 1.5rem;background:var(--panel);border:1px solid var(--rule);border-radius:4px;}
+  .bar-chart-title{font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--sage);font-weight:600;margin-bottom:1.1rem;}
+  .bar-row{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.7rem;}
+  .bar-row:last-child{margin-bottom:0;}
+  .bar-label{width:130px;flex-shrink:0;font-size:0.82rem;color:var(--paper);text-align:right;}
+  .bar-track{flex:1;background:rgba(237,234,227,0.08);border-radius:3px;height:22px;position:relative;overflow:hidden;}
+  .bar-fill{height:100%;background:linear-gradient(90deg, var(--sage), var(--amber));border-radius:3px;display:flex;align-items:center;}
+  .bar-value{font-size:0.75rem;font-weight:700;color:var(--bg);margin-left:auto;padding-right:0.5rem;white-space:nowrap;}
+  .bar-value.outside{color:var(--fog);flex-shrink:0;white-space:nowrap;font-weight:600;}
+  @media (max-width:560px){
+    .bar-label{width:88px;font-size:0.72rem;}
+  }
+
+  /* Timeline strip component */
+  .timeline-viz{margin:1.8rem 0 1rem;padding:1.6rem 1.2rem 1.2rem;background:var(--panel);border:1px solid var(--rule);border-radius:4px;overflow-x:auto;}
+  .timeline-track{position:relative;display:flex;justify-content:space-between;min-width:560px;padding:0 0.5rem;}
+  .timeline-track::before{content:"";position:absolute;top:7px;left:0.5rem;right:0.5rem;height:2px;background:linear-gradient(90deg, var(--sage), var(--amber));}
+  .timeline-point{position:relative;flex:1;text-align:center;}
+  .timeline-point::before{content:"";display:block;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--amber);margin:0 auto 0.8rem;position:relative;z-index:1;}
+  .timeline-point-label{font-size:0.72rem;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:0.04em;}
+  .timeline-point-desc{font-size:0.76rem;color:var(--fog);margin-top:0.3rem;line-height:1.35;max-width:120px;margin-left:auto;margin-right:auto;}
+
   .case{margin:1.6rem 0;padding:1.3rem 1.5rem;background:var(--panel);border-radius:3px;border:1px solid var(--rule);}
   .case .label{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:0.5rem;}
   .case p{color:var(--fog);font-size:0.98rem;margin:0;font-style:italic;}
@@ -322,11 +395,17 @@
   .tx-table td{padding:0.8rem 0.8rem 0.8rem 0;border-bottom:1px solid var(--rule);color:var(--fog);vertical-align:top;}
   .tx-table td:first-child{color:var(--paper);font-weight:500;white-space:nowrap;}
 
-  .sources .source-item{padding:1rem 0;border-top:1px solid var(--rule);}
+  .sources .source-item{padding:0.55rem 0;border-top:1px solid var(--rule);break-inside:avoid;}
   .sources .source-item:last-child{border-bottom:1px solid var(--rule);}
-  .sources .concept{font-weight:600;color:var(--paper);}
-  .sources .cite{font-size:0.9rem;color:var(--fog);font-style:italic;margin-top:0.3rem;}
-  .sources h3{color:var(--sage);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.08em;margin:2rem 0 0.4rem;}
+  .sources .concept{font-weight:600;color:var(--paper);font-size:0.92rem;}
+  .sources .cite{font-size:0.82rem;color:var(--fog);font-style:italic;margin-top:0.2rem;line-height:1.45;}
+  .sources h3{color:var(--sage);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.08em;margin:1.6rem 0 0.3rem;column-span:all;}
+  .sources.wrap{max-width:980px;}
+  .sources .source-columns{column-count:2;column-gap:2.6rem;}
+  @media (max-width:760px){
+    .sources.wrap{max-width:740px;}
+    .sources .source-columns{column-count:1;}
+  }
 
   footer{padding:3rem 0 4rem;color:var(--fog);font-size:0.85rem;}
   footer .crisis{margin-top:1.2rem;padding:1.2rem 1.4rem;background:var(--panel);border-radius:3px;border:1px solid var(--rule);}
@@ -361,6 +440,7 @@
 <body>
 
 <header class="hero wrap">
+  <img src="icon-512.png" alt="Leaving Weed — a no-cannabis symbol" class="hero-image" width="110" height="110">
   <div class="eyebrow">Leaving Weed — a quitting guide, grounded in the research</div>
   <h1>Quitting THC isn't the same experience for everyone — here's why</h1>
   <p class="lede">
@@ -368,6 +448,19 @@
     and what the evidence actually says helps. Written for general education, not diagnosis —
     no personal details, just the literature.
   </p>
+
+  <div class="tldr">
+    <div class="tldr-label">Quick answer</div>
+    <p>
+      <strong>Cannabis withdrawal starts within 24 hours, peaks around days 2–6, and mostly
+      resolves in 2–3 weeks</strong> — sleep, mood, and brain fog can take a few weeks longer.
+      It's harder if you have ADHD, autism, depression, or a psychosis-spectrum profile, use
+      high-potency products, or also use nicotine. Cognitive behavioral therapy, contingency
+      management, and free peer support (Marijuana Anonymous, SMART Recovery) are the
+      best-evidenced ways to make it stick.
+    </p>
+  </div>
+
   <div class="disclaimer">
     This is educational content, not medical advice. If you're in withdrawal right now and it
     feels unmanageable, or you're experiencing paranoia or psychosis, contact a doctor or the
@@ -399,6 +492,7 @@
 <nav class="toc wrap">
   <ul>
     <li><a href="#withdrawal">Withdrawal</a></li>
+    <li><a href="#getting-started">Your first week</a></li>
     <li><a href="#sleep">Sleep</a></li>
     <li><a href="#method">Tapering vs. cold turkey</a></li>
     <li><a href="#nicotine">Quitting with nicotine</a></li>
@@ -409,6 +503,7 @@
     <li><a href="#potency">Rising potency</a></li>
     <li><a href="#reefer-madness">Reefer Madness history</a></li>
     <li><a href="#psychosis">Paranoia & psychosis</a></li>
+    <li><a href="#readiness">Readiness to quit</a></li>
     <li><a href="#treatment">What helps</a></li>
     <li><a href="#peer-support">Peer support</a></li>
     <li><a href="#drug-testing">Detection windows</a></li>
@@ -418,6 +513,7 @@
     <li><a href="#more-symptoms">Other symptoms</a></li>
     <li><a href="#moderation-trap">The moderation trap</a></li>
     <li><a href="#repair">Physical recovery</a></li>
+    <li><a href="#how-habits-form">How habits form</a></li>
     <li><a href="#benefits">Benefits timeline</a></li>
     <li><a href="#lapse">A single slip</a></li>
     <li><a href="#practical">Real-life situations</a></li>
@@ -440,6 +536,26 @@
     <div class="stat"><div class="n">76%</div><div class="l">report anxiety/nervousness as a withdrawal symptom, the most common</div></div>
     <div class="stat"><div class="n">~2 wks</div><div class="l">typical time for most withdrawal symptoms to resolve</div></div>
   </div>
+
+  <div class="bar-chart">
+    <div class="bar-chart-title">How common each symptom is, among people with a diagnosable withdrawal syndrome</div>
+    <div class="bar-row">
+      <div class="bar-label">Anxiety</div>
+      <div class="bar-track"><div class="bar-fill" style="width:76%;"><span class="bar-value">76%</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Hostility / irritability</div>
+      <div class="bar-track"><div class="bar-fill" style="width:72%;"><span class="bar-value">72%</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Sleep difficulty</div>
+      <div class="bar-track"><div class="bar-fill" style="width:68%;"><span class="bar-value">68%</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Depressed mood</div>
+      <div class="bar-track"><div class="bar-fill" style="width:59%;"><span class="bar-value">59%</span></div></div>
+    </div>
+  </div>
   <ul class="symptoms">
     <li><strong>Onset:</strong> begins within 24 hours of stopping, peaks around days 2–6.</li>
     <li><strong>Common symptoms:</strong> anxiety, irritability and hostility, sleep disruption and vivid unpleasant dreams, decreased appetite, restlessness, and depressed mood.</li>
@@ -448,6 +564,30 @@
   </ul>
 
   <h3>How long does cannabis withdrawal last, day by day?</h3>
+  <div class="timeline-viz">
+    <div class="timeline-track">
+      <div class="timeline-point">
+        <div class="timeline-point-label">Day 1</div>
+        <div class="timeline-point-desc">Irritability, first cravings</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Days 2–3</div>
+        <div class="timeline-point-desc">Roughest stretch — anxiety, cravings peak</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Days 4–6</div>
+        <div class="timeline-point-desc">Intense, but plateauing</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Week 2</div>
+        <div class="timeline-point-desc">Physical symptoms ease</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Weeks 3–4</div>
+        <div class="timeline-point-desc">Acute symptoms mostly resolved</div>
+      </div>
+    </div>
+  </div>
   <p>
     <strong>Acute cannabis withdrawal typically begins within 24 hours, peaks between days 2 and
     6, and physically resolves within 2 to 3 weeks.</strong> Roughly, day by day:
@@ -475,6 +615,23 @@
   </p>
 </section>
 
+<section class="wrap" id="getting-started">
+  <div class="kicker">Before you start</div>
+  <h2>Your first week: a checklist</h2>
+  <p>
+    Everything on this page in one actionable sequence, if you'd rather act first and read the
+    reasoning behind each step later.
+  </p>
+  <ol class="checklist">
+    <li><strong>Pick your method.</strong> Cold turkey for lighter or shorter-term use; tapering with support for heavy, long-term, or high-potency use. See <a href="#method">Tapering vs. cold turkey</a>.</li>
+    <li><strong>Set up your physical firewall.</strong> Get rid of remaining supply before you start, not after the first craving hits.</li>
+    <li><strong>Tell one person.</strong> Someone who'll actually check in, not just someone you mention it to once.</li>
+    <li><strong>Plan for sleep specifically.</strong> It's the most commonly reported hardest part — see <a href="#sleep">Sleep</a> before you're in the middle of it.</li>
+    <li><strong>Line up peer support before you need it.</strong> Marijuana Anonymous, SMART Recovery, or r/leaves — see <a href="#peer-support">Peer support</a>.</li>
+    <li><strong>Know your "call a doctor" list in advance.</strong> Ongoing paranoia or psychosis, persistent vomiting, or a mental health crisis — decide now, not while it's happening, that these are a same-day call, not a wait-and-see.</li>
+  </ol>
+</section>
+
 <section class="wrap" id="sleep">
   <div class="kicker">One of the hardest parts</div>
   <h2>Sleep — why it's often the hardest part</h2>
@@ -484,10 +641,21 @@
     68%, close behind anxiety (76%) and irritability (72%) as one of the most common complaints —
     and for a lot of people, the one that's hardest to just push through.
   </p>
-  <div class="stat-row">
-    <div class="stat"><div class="n">Day 1–2</div><div class="l">insomnia typically begins, often the very first symptom</div></div>
-    <div class="stat"><div class="n">~Day 9</div><div class="l">vivid, unusually intense dreams tend to peak, as suppressed REM sleep rebounds</div></div>
-    <div class="stat"><div class="n">2–6 wks</div><div class="l">typical window for sleep quality to normalize; a smaller group has disruption for months</div></div>
+  <div class="timeline-viz">
+    <div class="timeline-track">
+      <div class="timeline-point">
+        <div class="timeline-point-label">Day 1–2</div>
+        <div class="timeline-point-desc">Insomnia typically begins</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">~Day 9</div>
+        <div class="timeline-point-desc">Vivid dreams tend to peak</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">2–6 wks</div>
+        <div class="timeline-point-desc">Sleep quality normalizes for most</div>
+      </div>
+    </div>
   </div>
   <p>
     The vivid dreams catch a lot of people off guard, but they're a predictable rebound effect,
@@ -538,6 +706,15 @@
     way, having a plan for the first week — sleep strategy, replacement routines, someone to tell —
     matters more than which method you pick.
   </p>
+  <div class="care-note">
+    <strong>One group this general advice doesn't fully apply to:</strong> if cannabis has been
+    functioning as your main way of managing something like severe PTSD, a diagnosed eating
+    disorder, or significant chronic pain, stopping abruptly can genuinely destabilize that
+    underlying condition, not just cause ordinary withdrawal. This isn't a reason not to quit — it's
+    a reason to loop in a doctor or therapist first so they can help plan the timing and, if needed,
+    arrange other support (medication, therapy adjustments) alongside the quit rather than pulling
+    everything away at once.
+  </div>
 </section>
 
 <section class="wrap" id="nicotine">
@@ -551,6 +728,18 @@
     quitting one while still using the other often doesn't bring the relief someone expects, and
     quitting both simultaneously can feel considerably more intense than either alone.
   </p>
+
+  <div class="bar-chart">
+    <div class="bar-chart-title">Share of regular cannabis users who also use nicotine</div>
+    <div class="bar-row">
+      <div class="bar-label">Reported range</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:40%; margin-left:40%; background:linear-gradient(90deg, var(--sage), var(--amber));"></div>
+      </div>
+      <span class="bar-value outside">40–80%</span>
+    </div>
+  </div>
+
   <p>
     The research on cessation outcomes is fairly consistent: continuing to smoke tobacco while
     trying to quit cannabis is one of the stronger predictors of relapsing back to cannabis use,
@@ -662,6 +851,21 @@
     involved in memory and learning), but how much of the association is causal versus explained
     by who uses heavily in the first place is still being worked out.
   </p>
+
+  <div class="condition-grid">
+    <div class="condition">
+      <h3>Dunedin cohort (2012)</h3>
+      <p>1,037 people tracked from birth. Found a 5.5–8 point IQ decline in persistent, adolescent-onset heavy users by their late 30s — corroborated by outside informants.</p>
+    </div>
+    <div class="condition">
+      <h3>Danish cohort (2024)</h3>
+      <p>5,162 men tracked for 44 years. Found no cognitive decline linked to cannabis use once other factors were statistically controlled for.</p>
+    </div>
+  </div>
+  <p class="muted" style="font-size:0.85rem;">
+    Two real, large, long-running studies — genuinely conflicting results. That's the actual state
+    of the science, not a reason to pick whichever one is more convenient.
+  </p>
   <p>
     What's less disputed: chronic smoked cannabis use is associated with more coughing, phlegm,
     and wheeze, similar to tobacco's respiratory effects, and it's linked to higher rates of
@@ -669,6 +873,20 @@
     1 in 10 people who use cannabis develop cannabis use disorder, rising to roughly 1 in 6 among
     those who start as teenagers.
   </p>
+
+  <div class="bar-chart">
+    <div class="bar-chart-title">Chance of developing cannabis use disorder, by age of first use</div>
+    <div class="bar-row">
+      <div class="bar-label">Any age of first use</div>
+      <div class="bar-track"><div class="bar-fill" style="width:10%;"></div></div>
+      <span class="bar-value outside">~1 in 10 (10%)</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Starting as a teenager</div>
+      <div class="bar-track"><div class="bar-fill" style="width:17%;"></div></div>
+      <span class="bar-value outside">~1 in 6 (17%)</span>
+    </div>
+  </div>
 </section>
 
 <section class="wrap" id="chs">
@@ -720,6 +938,30 @@
     to THC has collapsed as growers bred almost exclusively for potency, and CBD is one of the
     compounds that moderates THC's anxiety- and psychosis-related effects.
   </p>
+
+  <div class="bar-chart">
+    <div class="bar-chart-title">Average THC content, then vs. now (% of product)</div>
+    <div class="bar-row">
+      <div class="bar-label">Early 1970s</div>
+      <div class="bar-track"><div class="bar-fill" style="width:2%;"></div></div>
+      <span class="bar-value outside">under 2%</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">2022 average</div>
+      <div class="bar-track"><div class="bar-fill" style="width:16%;"></div></div>
+      <span class="bar-value outside">~16%</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Dispensary flower today</div>
+      <div class="bar-track"><div class="bar-fill" style="width:30%;"></div></div>
+      <span class="bar-value outside">25–35%</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Concentrates (dabs, wax)</div>
+      <div class="bar-track"><div class="bar-fill" style="width:80%;"><span class="bar-value">60–95%</span></div></div>
+    </div>
+  </div>
+
   <p class="muted">
     Practical implication: older research, older stories about "how easy it was to quit back
     then," and even a person's own memory of quitting a lower-potency product years ago may not
@@ -793,6 +1035,34 @@
   </div>
 </section>
 
+<section class="wrap" id="readiness">
+  <div class="kicker">Before "what works"</div>
+  <h2>People generally quit when they're ready, not when they're told to</h2>
+  <p>
+    This shows up constantly in addiction treatment, and it's not just an observation — it's the
+    basis of one of the field's most established models. The stages of change model describes
+    behavior change as moving through a series of stages — not yet considering it, considering it,
+    preparing to act, acting, and maintaining the change — and, importantly, notes that this isn't
+    a straight line. People commonly cycle back through earlier stages before a change sticks, and
+    that's described as a normal part of the process, not a failure of it.
+  </p>
+  <p>
+    This matters practically because it's the reasoning behind motivational interviewing, one of
+    the most evidence-supported counseling approaches in addiction treatment. Rather than arguing
+    someone into quitting, it works with a person's own ambivalence and reasons for wanting to
+    change, on the premise that motivation imposed from outside tends to be far less durable than
+    motivation someone arrives at themselves. A meta-analysis of over 8,000 psychotherapy patients
+    found a person's stage of readiness meaningfully predicts how much progress they make in
+    treatment — readiness isn't just a mood, it's a measurable factor in outcomes.
+  </p>
+  <p class="muted">
+    Practical implication: if you're reading this because someone else wants you to quit and
+    you're not sure you're there yet, that ambivalence is a documented, normal stage — not a
+    character flaw, and not something a website can talk you out of. If and when you do want to
+    stop, everything below is here.
+  </p>
+</section>
+
 <section class="wrap" id="treatment">
   <div class="kicker">What works</div>
   <h2>Evidence-based treatment options</h2>
@@ -846,10 +1116,20 @@
         Often the better fit for people who want structure without the 12-step framework.
       </p>
     </div>
+    <div class="condition">
+      <h3>Online communities</h3>
+      <p>
+        r/leaves is a large, actively moderated online community specifically for people quitting
+        cannabis, with a strong abstinence-focused culture; r/Petioles takes a moderation and
+        harm-reduction angle for people not aiming for strict lifelong abstinence. Both are free,
+        anonymous, and available any time — useful for the 3am moments when a formal meeting isn't
+        happening, though obviously not a substitute for professional support if things get serious.
+      </p>
+    </div>
   </div>
   <p class="muted" style="margin-top:1.2rem;">
-    Neither replaces treatment for a co-occurring condition like ADHD, depression, or a
-    psychosis-spectrum profile — but both are legitimate, no-cost tools worth trying, especially
+    None of these replace treatment for a co-occurring condition like ADHD, depression, or a
+    psychosis-spectrum profile — but all are legitimate, no-cost tools worth trying, especially
     in the first few weeks when structure and other people matter most.
   </p>
 </section>
@@ -872,6 +1152,34 @@
     <tr><td>Urine — chronic heavy use</td><td>30 days or more; some long-term heavy users test positive for 60+ days.</td></tr>
     <tr><td>Hair</td><td>Up to about 90 days, regardless of frequency.</td></tr>
   </table>
+
+  <div class="bar-chart">
+    <div class="bar-chart-title">Detection window by test type, in days (upper end of typical range)</div>
+    <div class="bar-row">
+      <div class="bar-label">Blood / saliva</div>
+      <div class="bar-track"><div class="bar-fill" style="width:4%;"></div></div>
+      <span class="bar-value outside">~3 days</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Urine, single use</div>
+      <div class="bar-track"><div class="bar-fill" style="width:4%;"></div></div>
+      <span class="bar-value outside">~3 days</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Urine, daily use</div>
+      <div class="bar-track"><div class="bar-fill" style="width:17%;"></div></div>
+      <span class="bar-value outside">10–15 days</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Urine, chronic heavy use</div>
+      <div class="bar-track"><div class="bar-fill" style="width:67%;"><span class="bar-value">30–60+ days</span></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Hair</div>
+      <div class="bar-track"><div class="bar-fill" style="width:100%;"><span class="bar-value">~90 days</span></div></div>
+    </div>
+  </div>
+
   <p class="muted" style="margin-top:1.2rem;">
     These are estimates, not guarantees — individual metabolism and body fat percentage shift the
     numbers meaningfully. A positive test only shows use happened within that window, not current
@@ -903,6 +1211,14 @@
     that for very heavy or long-duration use, the lived experience of fog may be compounded by
     sleep loss and withdrawal anxiety, not cognition changes alone. Either way, the direction is
     the same: it gets better with time, not worse.
+  </p>
+  <p class="muted">
+    One related but distinct effect while actively using: THC has been shown to distort subjective
+    time perception, making time feel like it's passing more slowly than it actually is. That
+    specific effect is tied to being under the influence, not to withdrawal — but it's worth
+    knowing about if part of what made cannabis appealing was that a boring stretch of time felt
+    shorter while using, since that's one more thing to expect feeling different once it's gone,
+    separate from memory and attention.
   </p>
 </section>
 
@@ -955,6 +1271,31 @@
     in advance tends to soften the letdown; it's a lull, not a verdict on whether quitting is
     working.
   </p>
+
+  <div class="timeline-viz">
+    <div class="timeline-track">
+      <div class="timeline-point">
+        <div class="timeline-point-label">Week 1</div>
+        <div class="timeline-point-desc">Physical symptoms still peaking</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Days 5–14</div>
+        <div class="timeline-point-desc">"Pink cloud" — clarity, pride, energy</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Week 3ish</div>
+        <div class="timeline-point-desc">The high fades — often the hardest mental stretch</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Beyond</div>
+        <div class="timeline-point-desc">Gradual leveling, with occasional PAWS waves</div>
+      </div>
+    </div>
+  </div>
+  <p class="muted" style="font-size:0.85rem;">
+    Not a strict schedule — the point is the shape (up, then down, then a slow climb), not the
+    exact week.
+  </p>
 </section>
 
 <section class="wrap" id="more-symptoms">
@@ -974,6 +1315,10 @@
     <li><strong>Digestive changes — cramping, loose stool, or constipation:</strong> plausible given how much of the gut's nervous system relies on the same receptors THC acts on, and widely reported anecdotally; treating it like a mild stomach bug (hydration, simple food, patience) for a week or two is the commonly suggested approach.</li>
     <li><strong>Sudden, intense emotions — crying more easily, short-fused irritability:</strong> ties into the same "chemical blanket removed" pattern behind the DSM-recognized irritability criterion — widely described as feeling like emotions are turned up to full volume for a couple of weeks.</li>
     <li><strong>Changes in libido:</strong> commonly reported in both directions (down during acute withdrawal, often described as rebounding afterward), plausibly tied to the same dopamine-system disruption behind anhedonia — though rigorous research specifically isolating this is limited.</li>
+    <li><strong>Rough mornings specifically:</strong> some people report the anxiety and unease is noticeably worse right after waking than later in the day. Cortisol naturally spikes in the first half hour after waking in everyone; a plausible but unconfirmed explanation is that this normal spike feels more intense when the nervous system is already in withdrawal-related overdrive, though this hasn't been specifically isolated and studied for cannabis withdrawal.</li>
+    <li><strong>Aches and pains showing up that weren't there before:</strong> commonly reported, especially old injuries or joint pain. THC has real analgesic properties, so one plausible explanation is that regular use was quietly masking low-level pain that becomes noticeable once it's gone — though this specific mechanism hasn't been directly studied in a withdrawal context, and new pain is also just worth mentioning to a doctor rather than assuming it's withdrawal.</li>
+    <li><strong>A confusing weight timeline:</strong> appetite loss commonly causes some weight drop in the first week or two (covered above), but people further out sometimes report gradual weight gain instead, even without major diet changes. Separately, population survey data has found regular cannabis users tend to have lower BMI on average than non-users — an association that isn't fully explained, and doesn't mean cannabis "prevents" weight gain for a given individual.</li>
+    <li><strong>Withdrawal can hit differently by sex:</strong> a research review found women tend to report stronger cannabis withdrawal overall, including more physical symptoms like nausea and stomach pain, than men — though findings across individual studies aren't fully consistent, and severity is still driven mainly by how heavy and long the use was.</li>
   </ul>
   <div class="care-note">
     <strong>One practical technique worth knowing:</strong> briefly submerging your face in ice water,
@@ -989,18 +1334,41 @@
   <div class="kicker">A pattern worth naming</div>
   <h2>The "I can probably moderate now" bargain</h2>
   <p>
-    A pattern reported constantly, though hard to formally measure: somewhere around a month or
-    two in, once the physical withdrawal is fully gone and things feel genuinely better, a
-    thought shows up — "I've clearly broken the habit, I could probably just smoke on weekends
-    now." For a real number of people who try it, that experiment quietly turns back into daily
-    use within a matter of weeks.
+    A pattern reported constantly, though hard to formally measure: somewhere around two to three
+    weeks in, once the acute physical withdrawal has largely faded, a thought shows up — "I've
+    clearly broken the habit, I could probably just smoke on weekends now." For a real number of
+    people who try it, that experiment quietly turns back into daily use within a matter of weeks.
+  </p>
+  <p>
+    This maps onto a well-established framework in addiction psychology called relapse prevention,
+    which describes exactly this kind of internal negotiation — rationalizing a lapse as proof of
+    control rather than a risk — as one of the most common paths back to regular use. Timing lines
+    up with the biology, too: physical withdrawal symptoms typically peak around days 2–6 and
+    mostly resolve within two weeks, but psychological vulnerability — cravings, the urge to
+    test the waters — tends to stay elevated well into weeks three and four, which is exactly the
+    window where this bargain shows up.
   </p>
   <p class="muted">
-    This lines up with general addiction psychology: once a daily-use pattern has been deeply
-    established, a return to genuinely moderate, occasional use is much harder to sustain than it
-    sounds in the moment of feeling good. That doesn't mean nobody can moderate afterward — some
-    people genuinely can — but it's worth treating the "I've got this handled now" thought as a
-    predictable moment to slow down and think it through, not a fact about how recovered you are.
+    That doesn't mean nobody can moderate afterward — some people genuinely can — but it's worth
+    treating the "I've got this handled now" thought as a predictable moment to slow down and
+    think it through, not a fact about how recovered you are.
+  </p>
+
+  <h3>Why "nothing feels fun yet" isn't a character issue</h3>
+  <p>
+    A related pattern: the same stretch where the moderation bargain tends to strike is often also
+    when boredom feels heaviest — hobbies, games, things that used to feel good, suddenly don't.
+    That timing isn't a coincidence. Chronic heavy use is linked to a blunted dopamine response in
+    the brain's reward circuitry, and cannabinoid receptors take roughly four weeks of abstinence
+    to rebuild toward baseline. Put together, that's a real, temporary dip in the brain's capacity
+    to register things as rewarding — not proof that sober life is just duller, and not a
+    permanent state.
+  </p>
+  <p class="muted">
+    Practically, this is one of the few spots where forcing yourself to go through the motions of
+    something — even without expecting to enjoy it yet — tends to help more than waiting to feel
+    like doing it. The motivation catching up to the action is normal here, not a sign it isn't
+    working.
   </p>
 </section>
 
@@ -1010,11 +1378,83 @@
   <p>
     Heavy, long-term cannabis use leads the brain to reduce its own cannabinoid (CB1) receptors.
     Recovery of those receptors — and the motivation and clarity that come back with them — takes
-    roughly two to four weeks of abstinence. Two mechanisms with real evidence behind them can
+    roughly two to four weeks of abstinence.
+  </p>
+
+  <div class="timeline-viz">
+    <div class="timeline-track">
+      <div class="timeline-point">
+        <div class="timeline-point-label">Day 1</div>
+        <div class="timeline-point-desc">Receptors at their most downregulated</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Week 1</div>
+        <div class="timeline-point-desc">Rebuilding begins</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">Weeks 2–3</div>
+        <div class="timeline-point-desc">Continued, gradual recovery</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">~Week 4</div>
+        <div class="timeline-point-desc">Near non-user baseline for most</div>
+      </div>
+    </div>
+  </div>
+  <p class="muted" style="font-size:0.85rem;">
+    Illustrative progression, not exact measured values — individual recovery speed varies with
+    how heavy and long the use was.
+  </p>
+
+  <p>
+    Two mechanisms with real evidence behind them can
     help that process along: sustained aerobic exercise promotes BDNF, a protein involved in
     rebuilding neural connections, and brief cold exposure shifts the nervous system's focus away
     from craving toward basic regulation. Neither is instant, and neither replaces clinical
     treatment for an underlying condition — but both measurably help the physical side.
+  </p>
+  <p>
+    There's a second, more direct reason exercise specifically helps: sustained aerobic exercise
+    raises anandamide, the body's own natural cannabinoid — the same "bliss molecule" system THC
+    acts on — and this endocannabinoid response is the leading explanation for the "runner's
+    high," not endorphins as commonly assumed. In effect, hard exercise gives the same
+    receptor system a legitimate, self-produced signal instead of a synthetic one. One small pilot
+    study found regular cannabis users show a blunted anandamide response to a standard exercise
+    stimulus compared to non-users — suggestive, not definitive, but a plausible reason this
+    system may take a little longer to respond fully during early recovery, and a reason to stick
+    with it rather than conclude it isn't working.
+  </p>
+</section>
+
+<section class="wrap" id="how-habits-form">
+  <div class="kicker">The mechanism underneath</div>
+  <h2>Why a habit feels automatic, and why that's reversible</h2>
+  <p>
+    "Rewiring your brain" sounds like a figure of speech, but the underlying process is physical.
+    Repeating an action strengthens the specific connection between the neurons involved — a
+    principle often summarized as "neurons that fire together, wire together." A new coping
+    behavior, tried once, is a weak connection that takes real effort to execute. A behavior
+    repeated hundreds of times becomes a fast, low-effort default the brain reaches for
+    automatically. That's not a character trait, it's just how repetition works mechanically —
+    which is also exactly why a new, competing pattern (a different way of handling stress or
+    boredom) gets stronger the more it's actually used, following the same rule.
+  </p>
+  <h3>Specifically for THC and the reward system</h3>
+  <p>
+    Cannabis's effect on dopamine isn't direct — it works by disabling a brake. Dopamine-producing
+    cells in the ventral tegmental area (VTA) are normally kept in check by neighboring cells that
+    release GABA, the brain's main inhibitory signal, so dopamine gets released in modest,
+    situation-appropriate amounts. THC binds to CB1 receptors sitting on those GABA cells and
+    temporarily quiets them — removing the brake rather than pressing an accelerator — which lets
+    the dopamine cells fire more freely than they normally would. This mechanism, called
+    disinhibition, is well established in the neuroscience literature specifically for
+    cannabinoids, not just assumed by analogy from other drugs.
+  </p>
+  <p class="muted">
+    With sustained heavy use, this repeated disinhibition is part of what drives the broader
+    downregulation covered above — the brain scales back its own dopamine and receptor activity to
+    compensate for how often it's being artificially amplified, which is also why that system
+    needs real time, not willpower alone, to reset once THC is removed.
   </p>
 </section>
 
@@ -1025,6 +1465,32 @@
     Concrete, and mostly reversible for people without years of adolescent-onset heavy use behind
     them. Individual timelines vary, but the general pattern across studies is consistent.
   </p>
+
+  <div class="timeline-viz">
+    <div class="timeline-track">
+      <div class="timeline-point">
+        <div class="timeline-point-label">Days–1wk</div>
+        <div class="timeline-point-desc">Heart rate & blood pressure normalize</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">1–2 wks</div>
+        <div class="timeline-point-desc">Coughing & breathing improve</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">2–4 wks</div>
+        <div class="timeline-point-desc">Attention & focus improve</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">~1 month</div>
+        <div class="timeline-point-desc">Memory & processing speed gains</div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-point-label">3 months</div>
+        <div class="timeline-point-desc">Executive function further improves</div>
+      </div>
+    </div>
+  </div>
+
   <table class="tx-table">
     <tr><th>Timeframe</th><th>What tends to improve</th></tr>
     <tr><td>Days to 1 week</td><td>Resting heart rate and blood pressure normalize; the acute cardiovascular effects of THC resolve quickly.</td></tr>
@@ -1065,6 +1531,15 @@
     slipped once" as "I've already failed." If a lapse happens, getting rid of remaining supply
     and telling one trusted person does more to prevent it becoming a pattern than willpower alone.
   </div>
+  <h3>The mechanism behind that guilt spiral has a name</h3>
+  <p>
+    Addiction psychology calls this the abstinence violation effect: a single slip gets
+    reinterpreted as total, catastrophic failure, which then becomes the justification for
+    abandoning the goal entirely — "I already ruined the streak, so what's the point in stopping
+    now." The distortion is in the reinterpretation, not the slip itself. A lapse is a single data
+    point; treating it as proof the whole effort failed is a separate, avoidable step that does
+    far more damage than the lapse alone.
+  </p>
 </section>
 
 <section class="wrap" id="practical" style="border-bottom:1px solid var(--rule);">
@@ -1116,6 +1591,28 @@
         just with cannabis.
       </p>
     </div>
+    <div class="condition">
+      <h3>The hidden cost isn't just the product</h3>
+      <p>
+        For heavy users, the real monthly spend is usually bigger than just the cannabis itself —
+        late-night food delivery, impulse purchases, lost work hours. Actually tallying it up for a
+        typical month, then physically moving that amount into a separate account, turns an
+        abstract "I should probably cut back" into a concrete number, and gives a ready-made
+        budget for something that actually helps recovery — new gear for a replacement hobby, a
+        gym membership, a therapy copay.
+      </p>
+    </div>
+    <div class="condition">
+      <h3>If you're studying or starting something demanding</h3>
+      <p>
+        A lot of people quit specifically to prepare for something — school, a licensing exam, a
+        new job that needs sharper focus. The catch: working memory and task-sequencing are
+        usually worse, not better, in the first couple of weeks (see <a href="#brain-fog">Brain
+        fog</a> above), before they improve past baseline. Planning the hardest cognitive work for
+        week three or four rather than week one avoids setting an unnecessarily discouraging first
+        impression of how this is going.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -1140,8 +1637,12 @@
   <div class="kicker">References</div>
   <h2>Sources</h2>
 
+  <div class="source-columns">
   <h3>Withdrawal & mechanism</h3>
   <div class="source-item"><div class="concept">Prevalence of sleep difficulty during withdrawal</div><div class="cite">Livne, O., et al. (2019), cited below, which reports sleep difficulty at 68.2% among frequent users with diagnosable withdrawal syndrome — the figure used here in place of a less precise secondary estimate.</div></div>
+  <div class="source-item"><div class="concept">Cannabis withdrawal review, including sex differences in severity</div><div class="cite">Bonnet, U., & Preuss, U. W. (2017). The cannabis withdrawal syndrome: current insights. <em>Substance Abuse and Rehabilitation</em>, 8, 9–37.</div></div>
+  <div class="source-item"><div class="concept">Relapse prevention model, including rationalization after a lapse</div><div class="cite">Marlatt, G. A., & George, W. H. (1984). Relapse prevention: Introduction and overview of the model. <em>British Journal of Addiction</em>, 79(3), 261–273.</div></div>
+  <div class="source-item"><div class="concept">Timeline of physical vs. psychological withdrawal symptoms</div><div class="cite">Budney, A. J., Moore, B. A., Vandrey, R. G., & Hughes, J. R. (2003). The time course and significance of cannabis withdrawal. <em>Journal of Abnormal Psychology</em>, 112(3), 393–402.</div></div>
   <div class="source-item"><div class="concept">CBT-I for cannabis withdrawal-related insomnia</div><div class="cite">Clinical treatment guidance on insomnia due to marijuana withdrawal, including CBT-I protocol and evidence for sustained benefit up to two years.</div></div>
   <div class="source-item"><div class="concept">Tapering vs. cold turkey trade-offs</div><div class="cite">How to Wean Off Marijuana: Tapering vs. Cold Turkey. ScienceInsights (2026); Tapering Off Weed vs. Quitting Cold Turkey. Clear30 (2026).</div></div>
   <div class="source-item"><div class="concept">Cannabis withdrawal syndrome, prevalence in U.S. adults</div><div class="cite">Livne, O., et al. (2019). DSM-5 cannabis withdrawal syndrome: Demographic and clinical correlates in U.S. adults. <em>Drug and Alcohol Dependence</em>, 195, 170–177.</div></div>
@@ -1149,7 +1650,7 @@
   <div class="source-item"><div class="concept">Self-medication hypothesis</div><div class="cite">Khantzian, E. J. (1985). The self-medication hypothesis of addictive disorders: focus on heroin and cocaine dependence. <em>American Journal of Psychiatry</em>, 142(11), 1259–1264.</div></div>
   <div class="source-item"><div class="concept">Self-medication in hazardous cannabis users</div><div class="cite">Bujarski, S. J., et al. Predicting self-medication with cannabis in young adults with hazardous cannabis use. <em>Cannabis</em> / PMC8834899.</div></div>
   <div class="source-item"><div class="concept">CB1 receptor downregulation and recovery</div><div class="cite">Hirvonen, J., et al. (2012). Reversible and regionally selective downregulation of brain cannabinoid CB1 receptors in chronic daily cannabis smokers. <em>Molecular Psychiatry</em>, 17(6), 642–649.</div></div>
-  <div class="source-item"><div class="concept">THC effects on working memory and psychosis-like symptoms</div><div class="cite">D'Souza, D. C., et al. (2004). The psychotomimetic effects of intravenous delta-9-tetrahydrocannabinol in healthy individuals. <em>Neuropsychopharmacology</em>, 29(8), 1558–1572.</div></div>
+  <div class="source-item"><div class="concept">THC effects on working memory, time perception, and psychosis-like symptoms</div><div class="cite">D'Souza, D. C., et al. (2004). The psychotomimetic effects of intravenous delta-9-tetrahydrocannabinol in healthy individuals. <em>Neuropsychopharmacology</em>, 29(8), 1558–1572.</div></div>
   <div class="source-item"><div class="concept">Cannabinoid effects on memory, broadly</div><div class="cite">Ranganathan, M., & D'Souza, D. C. (2006). The acute effects of cannabinoids on memory in humans: a review. <em>Psychopharmacology</em>, 188(4), 425–444.</div></div>
 
   <h3>Condition-specific patterns</h3>
@@ -1164,6 +1665,9 @@
   <div class="source-item"><div class="concept">CBT for cannabis cessation in first-episode psychosis</div><div class="cite">Randomized controlled trial of CBT-CC vs. treatment as usual in first-episode psychosis cannabis users. <em>PMC9224093</em> (2022).</div></div>
 
   <h3>Treatment evidence</h3>
+  <div class="source-item"><div class="concept">Stages of change / transtheoretical model of behavior change</div><div class="cite">Prochaska, J. O., & DiClemente, C. C. (1983). Stages and processes of self-change of smoking: toward an integrative model of change. <em>Journal of Consulting and Clinical Psychology</em>, 51(3), 390–395.</div></div>
+  <div class="source-item"><div class="concept">Motivational interviewing, foundational text</div><div class="cite">Miller, W. R., & Rollnick, S. (2013). <em>Motivational Interviewing: Helping People Change</em> (3rd ed.). Guilford Press.</div></div>
+  <div class="source-item"><div class="concept">Stage of change as a predictor of psychotherapy outcomes (meta-analysis)</div><div class="cite">Norcross, J. C., Krebs, P. M., & Prochaska, J. O. (2011). Stages of change. <em>Journal of Clinical Psychology</em>, 67(2), 143–154. Meta-analysis of 39 studies, 8,238 patients.</div></div>
   <div class="source-item"><div class="concept">Current treatment landscape and outcomes for cannabis use disorder</div><div class="cite">Current Treatments for Cannabis Use Disorder. <em>Psychiatric Times</em> (2026).</div></div>
   <div class="source-item"><div class="concept">Combined CBT/MET/contingency management, computer-delivered vs. in-person</div><div class="cite">Budney, A. J., et al. (2015). Computer-assisted behavioral therapy and contingency management for cannabis use disorder. <em>Psychology of Addictive Behaviors</em>.</div></div>
   <div class="source-item"><div class="concept">Contingency management meta-analysis</div><div class="cite">Contingency Management for Cannabis Use Disorder Treatment: a systematic review and meta-analysis. <em>European Addiction Research</em>, 30(5), 321 (2024).</div></div>
@@ -1192,18 +1696,23 @@
   <h3>Cognitive recovery, temperature regulation, and post-acute withdrawal</h3>
   <div class="source-item"><div class="concept">Cardiovascular changes (blood pressure) during cannabis abstinence</div><div class="cite">Vandrey, R., Umbricht, A., & Strain, E. C. (2011). Increased blood pressure after abrupt cessation of daily cannabis use. <em>Journal of Addiction Medicine</em>, 5(1), 16–20. Small study (n=13); effect concentrated in about half of participants.</div></div>
   <div class="source-item"><div class="concept">Distress tolerance techniques (temperature/dive reflex) in DBT</div><div class="cite">Cold-water/temperature distress tolerance skills are a standard component of dialectical behavior therapy (DBT) crisis-survival skills training, not a cannabis-specific claim.</div></div>
-  <div class="source-item"><div class="concept">A note on the "Other symptoms" section above</div><div class="cite">Jaw clenching, restless legs, digestive changes, emotional volatility, and libido changes during cannabis withdrawal are widely reported in recovery communities and by addiction counselors, but lack the same depth of dedicated large-scale clinical study as the DSM-5-recognized symptoms cited elsewhere on this page. Included as commonly-described experience, not as equivalently established science.</div></div>
+  <div class="source-item"><div class="concept">Cannabis use associated with lower BMI in population surveys</div><div class="cite">Le Strat, Y., & Le Foll, B. (2011). Obesity and cannabis use: results from 2 representative national surveys. <em>American Journal of Epidemiology</em>, 174(8), 929–933.</div></div>
+  <div class="source-item"><div class="concept">A note on the "Other symptoms" section above</div><div class="cite">Jaw clenching, restless legs, digestive changes, emotional volatility, libido changes, morning-specific anxiety, unmasked pain, and weight fluctuations during cannabis withdrawal are widely reported in recovery communities and by addiction counselors, but (aside from the BMI survey data cited above) lack the same depth of dedicated large-scale clinical study as the DSM-5-recognized symptoms cited elsewhere on this page. Included as commonly-described experience, not as equivalently established science.</div></div>
   <div class="source-item"><div class="concept">Cannabis withdrawal prevalence by clinical setting (pooled meta-analysis)</div><div class="cite">Bahji, A., Stephenson, C., Tyo, R., Hawken, E. R., & Seitz, D. P. (2020). Prevalence of Cannabis Withdrawal Symptoms Among People With Regular or Dependent Use of Cannabinoids: A Systematic Review and Meta-analysis. <em>JAMA Network Open</em>, 3(4), e202370.</div></div>
   <div class="source-item"><div class="concept">Cognitive functioning and recovery with abstinence in adolescents/young adults</div><div class="cite">Scott, J. C., Slomiak, S. T., Jones, J. D., Rosen, A. F. G., Moore, T. M., & Gur, R. C. (2018). Association of Cannabis With Cognitive Functioning in Adolescents and Young Adults: A Systematic Review and Meta-analysis. <em>JAMA Psychiatry</em>, 75(6), 585–595.</div></div>
   <div class="source-item"><div class="concept">THC release from fat stores during lipolysis ("reintoxication")</div><div class="cite">Gunasekaran, N., Long, L. E., Dawson, B. L., Hansen, G. H., Richardson, D. P., Li, K. M., Arnold, J. C., & McGregor, I. S. (2009). Reintoxication: the release of fat-stored Δ9-tetrahydrocannabinol (THC) into blood is enhanced by food deprivation or ACTH exposure. <em>British Journal of Pharmacology</em>, 158(5), 1330–1337.</div></div>
 
   <h3>Behavioral mechanics & physical recovery</h3>
+  <div class="source-item"><div class="concept">Cannabinoid-specific disinhibition mechanism in the VTA</div><div class="cite">Lupica, C. R., & Riegel, A. C. (2005). Endocannabinoid release from midbrain dopamine neurons: a potential substrate for cannabinoid receptor antagonist treatment of addiction. <em>Neuropharmacology</em>, 48(8), 1105–1116.</div></div>
+  <div class="source-item"><div class="concept">Drug-evoked synaptic plasticity and circuit remodeling, broadly</div><div class="cite">Lüscher, C., & Malenka, R. C. (2011). Drug-evoked synaptic plasticity in addiction: from molecular changes to circuit remodeling. <em>Neuron</em>, 69(4), 650–663.</div></div>
   <div class="source-item"><div class="concept">Extinction bursts in behavior change</div><div class="cite">Skinner, B. F. (1938). <em>The Behavior of Organisms: An Experimental Analysis</em>. Appleton-Century.</div></div>
   <div class="source-item"><div class="concept">Exercise and neuroplasticity (BDNF)</div><div class="cite">Cotman, C. W., & Berchtold, N. C. (2002). Exercise: a behavioral intervention to enhance brain health and plasticity. <em>Trends in Neurosciences</em>, 25(6), 295–301.</div></div>
   <div class="source-item"><div class="concept">Cold exposure and nervous system regulation</div><div class="cite">Srámek, P., et al. (2000). Human physiological responses to immersion into water of different temperatures. <em>European Journal of Applied Physiology</em>, 81(5), 436–442.</div></div>
+  </div>
 </section>
 
 <footer class="wrap">
+  <p style="font-size:0.82rem; color:var(--fog); margin-bottom:0.8rem;">Last updated August 13, 2026.</p>
   <p>Written for general education. Not a substitute for diagnosis or treatment from a licensed clinician. There's also an optional <a href="journal.html">day-by-day journal template</a> if you want to track your own quit.</p>
   <div class="crisis">
     <strong>Looking for treatment?</strong> SAMHSA's National Helpline — 1-800-662-4357 — is free,
