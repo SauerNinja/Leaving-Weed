@@ -287,11 +287,48 @@
   a{color:var(--amber);}
   .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
 
-  header.hero{padding:4rem 0 3rem;border-bottom:1px solid var(--rule);}
-  .hero-image{
-    width:110px; height:110px; border-radius:14px; margin-bottom:1.6rem;
-    box-shadow:0 8px 30px rgba(0,0,0,0.35);
+  header.hero{padding:4.5rem 0 3rem;border-bottom:1px solid var(--rule);text-align:center;}
+  header.hero .lede, header.hero .tldr, header.hero .disclaimer{text-align:left;}
+  .hero-image-wrap{position:relative; display:inline-block; margin-bottom:1.4rem;}
+  .hero-image-wrap::before{
+    content:""; position:absolute; left:50%; top:50%;
+    width:340px; height:340px; transform:translate(-50%,-50%);
+    background:radial-gradient(circle, rgba(127,168,143,0.28) 0%, rgba(217,142,63,0.10) 45%, transparent 72%);
+    filter:blur(4px); z-index:0;
   }
+  .hero-image{
+    position:relative; z-index:1;
+    width:190px; height:190px; border-radius:22px;
+    box-shadow:0 14px 44px rgba(0,0,0,0.45), 0 0 0 1px rgba(237,234,227,0.06);
+  }
+  .hero-flourish{
+    display:flex; align-items:center; justify-content:center; gap:0.9rem;
+    margin:0 0 1.6rem; color:var(--sage); opacity:0.75;
+  }
+  .hero-flourish .line{height:1px; width:56px; background:linear-gradient(90deg, transparent, var(--sage));}
+  .hero-flourish .line.right{background:linear-gradient(90deg, var(--sage), transparent);}
+  .hero-flourish .dot{width:5px; height:5px; border-radius:50%; background:var(--amber);}
+  @media (max-width:560px){
+    .hero-image{width:140px; height:140px;}
+    .hero-image-wrap::before{width:240px; height:240px;}
+  }
+
+  .share-bar{
+    padding:2.6rem 0; border-bottom:1px solid var(--rule); text-align:center;
+  }
+  .share-bar .share-label{
+    font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--sage); font-weight:600; margin-bottom:1rem;
+  }
+  .share-bar .share-links{display:flex; align-items:center; justify-content:center; gap:0.7rem;}
+  .share-bar a{
+    display:flex; align-items:center; justify-content:center;
+    width:42px; height:42px; border-radius:50%;
+    background:var(--panel); border:1px solid var(--rule); color:var(--paper);
+    text-decoration:none; transition:border-color 0.15s, color 0.15s;
+  }
+  .share-bar a:hover{border-color:var(--amber); color:var(--amber);}
+  .share-bar svg{width:18px; height:18px; fill:currentColor;}
   .eyebrow{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);font-weight:500;}
   h1{font-size:clamp(2.1rem,5.5vw,3.1rem);font-weight:500;line-height:1.12;margin:0.4em 0 0.5em;max-width:20ch;}
   .lede{font-size:1.08rem;color:var(--fog);max-width:58ch;}
@@ -440,7 +477,10 @@
 <body>
 
 <header class="hero wrap">
-  <img src="icon-512.png" alt="Leaving Weed — a no-cannabis symbol" class="hero-image" width="110" height="110">
+  <div class="hero-image-wrap">
+    <img src="hero-icon.png" alt="Leaving Weed — a no-cannabis symbol" class="hero-image" width="190" height="190">
+  </div>
+  <div class="hero-flourish"><span class="line"></span><span class="dot"></span><span class="line right"></span></div>
   <div class="eyebrow">Leaving Weed — a quitting guide, grounded in the research</div>
   <h1>Quitting THC isn't the same experience for everyone — here's why</h1>
   <p class="lede">
@@ -1710,6 +1750,21 @@
   <div class="source-item"><div class="concept">Cold exposure and nervous system regulation</div><div class="cite">Srámek, P., et al. (2000). Human physiological responses to immersion into water of different temperatures. <em>European Journal of Applied Physiology</em>, 81(5), 436–442.</div></div>
   </div>
 </section>
+
+<div class="share-bar wrap">
+  <div class="share-label">Share this guide</div>
+  <div class="share-links">
+    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsauerninja.github.io%2FLeaving-Weed%2F&text=A%20sourced%20guide%20to%20quitting%20THC%20%E2%80%94%20real%20withdrawal%20timeline%2C%20why%20it%20hits%20some%20people%20harder%2C%20and%20what%20actually%20helps." target="_blank" rel="noopener" aria-label="Share on X">
+      <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-6.9l-5.4-6.9L4.8 22H1.6l8.1-9.3L1 2h7l4.9 6.3L18.9 2Zm-1.2 18h1.9L7.4 4h-2l12.3 16Z"/></svg>
+    </a>
+    <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsauerninja.github.io%2FLeaving-Weed%2F&title=Leaving%20Weed%20%E2%80%94%20a%20sourced%20guide%20to%20quitting%20THC" target="_blank" rel="noopener" aria-label="Share on Reddit">
+      <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.443 4.744-1.51l.916-4.263a.36.36 0 0 1 .131-.212.34.34 0 0 1 .224-.078l2.929.628a1.24 1.24 0 0 1 1.078-.657zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </a>
+    <a href="mailto:?subject=Leaving%20Weed%20%E2%80%94%20a%20sourced%20guide%20to%20quitting%20THC&body=Thought%20this%20might%20help%3A%20https%3A%2F%2Fsauerninja.github.io%2FLeaving-Weed%2F" aria-label="Share by email">
+      <svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.2.5 7.8 6 7.8-6H4.2ZM20 7.4l-7.5 5.8a1 1 0 0 1-1.2 0L4 7.4V18h16V7.4Z"/></svg>
+    </a>
+  </div>
+</div>
 
 <footer class="wrap">
   <p style="font-size:0.82rem; color:var(--fog); margin-bottom:0.8rem;">Last updated August 13, 2026.</p>
