@@ -62,8 +62,8 @@
   "image": "https://sauerninja.github.io/Leaving-Weed/og-image.png",
   "mainEntityOfPage": "https://sauerninja.github.io/Leaving-Weed/index.html",
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-13",
-  "articleSection": ["Withdrawal", "Sleep", "Tapering vs cold turkey", "Nicotine co-use", "Self-medication", "Comorbid conditions", "Costs of heavy use", "Cannabinoid hyperemesis syndrome", "Rising potency", "Reefer Madness history", "Psychosis risk", "Treatment", "Peer support", "Detection windows", "Brain fog", "Night sweats", "Post-acute withdrawal", "Other commonly reported symptoms", "The moderation trap", "Recovery", "Benefits of quitting", "Relapse prevention", "Real-life situations"]
+  "dateModified": "2026-08-15",
+  "articleSection": ["Withdrawal", "Comparison to other substances", "Sleep", "Tapering vs cold turkey", "Nicotine co-use", "Self-medication", "Comorbid conditions", "Age of first use", "Costs of heavy use", "Cannabinoid hyperemesis syndrome", "Rising potency", "Edibles vs smoking vs vaping", "Reefer Madness history", "Psychosis risk", "Treatment", "Readiness to change", "Peer support", "Detection windows", "Brain fog", "Neural mechanism of habit and reward", "Night sweats", "Post-acute withdrawal", "Other commonly reported symptoms", "The moderation trap", "Recovery", "Benefits of quitting", "Relapse prevention", "Real-life situations", "Glossary"]
 }
 </script>
 <script type="application/ld+json">
@@ -77,6 +77,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Withdrawal typically begins within 24 hours of stopping, peaks around days 2 to 6, and most symptoms resolve within about two weeks. Motivation and concentration can take longer to fully return, often 2 to 4 weeks, as cannabinoid receptors continue rebuilding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is cannabis withdrawal as dangerous as alcohol or opioid withdrawal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Alcohol and benzodiazepine withdrawal can cause seizures and be fatal without medical supervision. Opioid withdrawal is severely uncomfortable but rarely fatal. Cannabis withdrawal is real and clinically recognized but does not carry the seizure or fatality risk of these other substances, which is why it's generally safe to quit without medical detox for most people."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it harder to quit vaping or dabbing than smoking flower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often, yes. Vaping and dabbing deliver THC fastest and in the highest single-use concentrations, which is part of why quitting them is commonly reported as harder than quitting flower. Edibles have a delayed onset of 30 minutes to 2 hours and are easy to overconsume for that reason, so heavy daily edible use can deliver just as much cumulative THC exposure despite feeling less intense than smoking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is quitting weed different for teenagers than adults?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The withdrawal process itself is similar, but the stakes around age of first use are higher. A 2026 study of over 11,000 US teenagers found those who used cannabis showed slower gains in memory and thinking skills over time compared to peers who didn't, even after accounting for family background and mental health. Adolescent brains are still actively building the reward and dopamine systems cannabis interacts with, which is why involving a doctor or therapist is especially worthwhile for younger users."
       }
     },
     {
@@ -287,7 +311,25 @@
   a{color:var(--amber);}
   .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
 
-  header.hero{padding:4.5rem 0 3rem;border-bottom:1px solid var(--rule);text-align:center;}
+  header.hero{padding:4.5rem 0 3rem;border-bottom:1px solid var(--rule);text-align:center;position:relative;overflow:hidden;}
+
+  /* Falling leaves: contained to hero only, muted/desaturated to match the site's serious
+     tone rather than a bright, festive cannabis-green effect. Slow, sparse, low-opacity. */
+  .leaf-field{position:absolute; inset:0; pointer-events:none; z-index:-1; overflow:hidden;}
+  .falling-leaf{
+    position:absolute; top:-40px; opacity:0.16; color:var(--sage);
+    animation:leaf-fall linear infinite;
+  }
+  .falling-leaf svg{width:100%; height:100%; display:block; fill:currentColor;}
+  @keyframes leaf-fall{
+    0%{transform:translateY(0) rotate(0deg); opacity:0;}
+    8%{opacity:0.16;}
+    92%{opacity:0.12;}
+    100%{transform:translateY(720px) rotate(300deg); opacity:0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .leaf-field{display:none;}
+  }
   header.hero .lede, header.hero .tldr, header.hero .disclaimer{text-align:left;}
   .hero-image-wrap{position:relative; display:inline-block; margin-bottom:1.4rem;}
   .hero-image-wrap::before{
@@ -329,6 +371,11 @@
   }
   .share-bar a:hover{border-color:var(--amber); color:var(--amber);}
   .share-bar svg{width:18px; height:18px; fill:currentColor;}
+
+  .glossary{display:grid; grid-template-columns:1fr 1fr; gap:1rem 1.5rem; margin-top:1.6rem;}
+  @media (max-width:640px){.glossary{grid-template-columns:1fr;}}
+  .glossary dt{font-weight:600; color:var(--amber); font-size:0.92rem; margin-bottom:0.2rem;}
+  .glossary dd{margin:0; color:var(--fog); font-size:0.88rem; line-height:1.5;}
   .eyebrow{font-size:0.8rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--sage);font-weight:500;}
   h1{font-size:clamp(2.1rem,5.5vw,3.1rem);font-weight:500;line-height:1.12;margin:0.4em 0 0.5em;max-width:20ch;}
   .lede{font-size:1.08rem;color:var(--fog);max-width:58ch;}
@@ -451,6 +498,32 @@
 
   @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
 
+  /* Reading progress bar */
+  #progress-bar{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg, var(--sage), var(--amber));
+    z-index:1000; transition:width 0.1s ease-out;
+  }
+
+  /* Back to top button */
+  #back-to-top{
+    position:fixed; right:1.2rem; bottom:1.2rem; z-index:900;
+    width:44px; height:44px; border-radius:50%;
+    background:var(--panel); border:1px solid var(--rule); color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; opacity:0; pointer-events:none;
+    transition:opacity 0.2s, border-color 0.15s, transform 0.15s;
+  }
+  #back-to-top.visible{opacity:1; pointer-events:auto;}
+  #back-to-top:hover{border-color:var(--amber); transform:translateY(-3px);}
+  #back-to-top svg{width:18px; height:18px; fill:currentColor;}
+
+  /* Subtle hover lift on interactive-feeling content cards */
+  .condition, .bar-chart, .timeline-viz, .case{transition:transform 0.15s, border-color 0.15s;}
+  .condition:hover, .bar-chart:hover, .timeline-viz:hover{
+    transform:translateY(-2px); border-color:rgba(217,142,63,0.35);
+  }
+
   /* Cookie consent banner */
   #consent-banner{
     position:fixed; left:1rem; bottom:1rem; z-index:999;
@@ -476,7 +549,22 @@
 </head>
 <body>
 
+<div id="progress-bar"></div>
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
 <header class="hero wrap">
+  <div class="leaf-field" aria-hidden="true">
+    <div class="falling-leaf" style="left:59%; width:30px; height:45px; animation-duration:22.7s; animation-delay:0.6s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:61%; width:21px; height:32px; animation-duration:18.5s; animation-delay:0.5s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:25%; width:27px; height:40px; animation-duration:22.0s; animation-delay:-8.6s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:25%; width:19px; height:28px; animation-duration:14.9s; animation-delay:-12.7s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:70%; width:18px; height:27px; animation-duration:22.1s; animation-delay:-3.4s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:78%; width:28px; height:42px; animation-duration:23.8s; animation-delay:3.2s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:80%; width:26px; height:39px; animation-duration:20.5s; animation-delay:-5.0s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+    <div class="falling-leaf" style="left:10%; width:21px; height:32px; animation-duration:14.6s; animation-delay:-15.4s;"><svg viewBox="0 0 40 60"><path d="M20 2C8 14 3 30 20 58C37 30 32 14 20 2Z"/><line x1="20" y1="8" x2="20" y2="52" stroke="rgba(18,32,28,0.35)" stroke-width="1.2"/></svg></div>
+  </div>
   <div class="hero-image-wrap">
     <img src="hero-icon.png" alt="Leaving Weed — a no-cannabis symbol" class="hero-image" width="190" height="190">
   </div>
@@ -532,12 +620,14 @@
 <nav class="toc wrap">
   <ul>
     <li><a href="#withdrawal">Withdrawal</a></li>
+    <li><a href="#comparison">Vs. other substances</a></li>
     <li><a href="#getting-started">Your first week</a></li>
     <li><a href="#sleep">Sleep</a></li>
     <li><a href="#method">Tapering vs. cold turkey</a></li>
     <li><a href="#nicotine">Quitting with nicotine</a></li>
     <li><a href="#why-medicate">Why people self-medicate</a></li>
     <li><a href="#conditions">Why it's harder for some</a></li>
+    <li><a href="#adolescents">Age of first use</a></li>
     <li><a href="#costs">Costs of heavy use</a></li>
     <li><a href="#chs">CHS</a></li>
     <li><a href="#potency">Rising potency</a></li>
@@ -547,6 +637,7 @@
     <li><a href="#treatment">What helps</a></li>
     <li><a href="#peer-support">Peer support</a></li>
     <li><a href="#drug-testing">Detection windows</a></li>
+    <li><a href="#driving">Driving & THC</a></li>
     <li><a href="#brain-fog">Brain fog</a></li>
     <li><a href="#night-sweats">Night sweats</a></li>
     <li><a href="#paws">PAWS</a></li>
@@ -558,6 +649,7 @@
     <li><a href="#lapse">A single slip</a></li>
     <li><a href="#practical">Real-life situations</a></li>
     <li><a href="#relationships">Relationships</a></li>
+    <li><a href="#glossary">Glossary</a></li>
     <li><a href="#sources">Sources</a></li>
   </ul>
 </nav>
@@ -652,6 +744,37 @@
     among inpatients, with an overall pooled average of 47%. The takeaway: the heavier and more
     treatment-relevant the sample, the higher the reported rate — which tracks with what the
     biology would predict.
+  </p>
+</section>
+
+<section class="wrap" id="comparison">
+  <div class="kicker">Where it fits</div>
+  <h2>Is cannabis withdrawal as dangerous as other withdrawal?</h2>
+  <p>
+    A common, reasonable question — and the honest answer is no, not in terms of physical danger,
+    though that doesn't make it trivial. Addiction medicine draws a real distinction between how
+    <em>uncomfortable</em> a withdrawal is and how <em>medically dangerous</em> it is, and cannabis
+    sits in a clearly different tier on the danger side than several other common substances.
+  </p>
+  <div class="condition-grid">
+    <div class="condition">
+      <h3>Alcohol & benzodiazepines</h3>
+      <p>The most dangerous category — withdrawal can cause seizures and delirium tremens, and can be fatal without medical supervision. Never stop either abruptly without medical guidance.</p>
+    </div>
+    <div class="condition">
+      <h3>Opioids</h3>
+      <p>Physically severe and intensely uncomfortable — often described as one of the worst subjective experiences — but rarely fatal on its own, aside from dehydration risk from vomiting and diarrhea.</p>
+    </div>
+    <div class="condition">
+      <h3>Cannabis</h3>
+      <p>Real, clinically recognized, and can be significantly disruptive — but does not carry the seizure or fatality risk of alcohol, benzodiazepines, or (rarely) opioid withdrawal. Milder physically, not imaginary.</p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:1.2rem;">
+    This is exactly why quitting cannabis is generally safe to do without medical supervision for
+    most people — but it's also why the popular idea that cannabis withdrawal "isn't real" is
+    wrong. It's real and clinically documented; it's just not in the same danger category as the
+    substances that actually require a medical detox.
   </p>
 </section>
 
@@ -870,6 +993,36 @@
   </p>
 </section>
 
+<section class="wrap" id="adolescents">
+  <div class="kicker">A different developmental stage</div>
+  <h2>Why age of first use matters so much</h2>
+  <p>
+    Everything on this page applies to adult brains. Adolescent brains — roughly early teens
+    through the early twenties, since brain development doesn't finish at 18 — are still actively
+    building the reward and dopamine systems that cannabis interacts with, which changes the
+    calculus in a real way, not just a legal one. A large 2026 study of over 11,000 US teenagers
+    found that those who started using cannabis showed slower gains in memory and thinking skills
+    over time compared to peers who didn't use, even after accounting for family background,
+    mental health, and other substance use.
+  </p>
+  <p>
+    Adult brains are mostly built; disrupting an already-established system and disrupting a
+    system that's still under construction are different problems. Interrupting a house's
+    electrical wiring after it's finished is inconvenient — interrupting it while the walls are
+    still being built changes how the whole house turns out. That's the biological argument
+    behind why age of first use is one of the most consistent factors in cannabis research: not
+    because teenage brains are "weaker," but because they're mid-construction, and the same
+    disruption lands differently on a system that's still setting its long-term wiring than on one
+    that's already established.
+  </p>
+  <p class="muted">
+    Practically: everything on this page about withdrawal, treatment, and recovery still applies
+    to teenagers and young adults, but the case for treating early heavy use seriously — and for
+    involving a doctor or therapist rather than trying to handle it solo — is stronger the younger
+    the person is.
+  </p>
+</section>
+
 <section class="wrap" id="costs">
   <div class="kicker">The measurable costs</div>
   <h2>What heavy long-term use is associated with</h2>
@@ -1009,6 +1162,18 @@
     escalation to daily use, more intense withdrawal, and higher psychosis risk — none of which
     is a reason not to quit, but it is a reason not to underestimate what you're quitting.
   </p>
+  <h3>Does the delivery method — smoking, vaping, edibles — change withdrawal?</h3>
+  <p>
+    The receptor mechanism driving withdrawal is the same regardless of how THC gets into the
+    body, so the underlying process doesn't fundamentally change. What does differ is dosing
+    control and absorption speed. Edibles are absorbed through the liver, take 30 minutes to 2
+    hours to take effect, and are notoriously easy to over-dose on precisely because the delay
+    tempts people into taking more before the first dose has kicked in — daily heavy edible use
+    can deliver just as much cumulative THC exposure as smoking or vaping, even though it doesn't
+    feel like a "harder" habit the way dabbing does. Vaping concentrates delivers THC fastest and
+    in the highest single-use doses, which is part of why quitting vape pens and dabs specifically
+    is so often reported as harder than quitting flower.
+  </p>
 </section>
 
 <section class="wrap" id="reefer-madness">
@@ -1064,6 +1229,13 @@
     with a story: a delusion. This risk is elevated in people with schizotypal or
     schizophrenia-spectrum profiles, since their dopamine systems already run less predictably.
   </p>
+  <p>
+    Think of dopamine's normal job as a smoke alarm calibrated to go off for actual smoke.
+    Psychosis is that alarm miscalibrated to go off for steam from a shower, or nothing at all —
+    and because the alarm is going off, the brain assumes there must be a fire and starts
+    searching for one, even where there isn't one. The delusion isn't the malfunction itself;
+    it's the mind's attempt to make sense of a false alarm that feels completely real.
+  </p>
   <div class="care-note">
     <strong>This isn't a variant worth romanticizing.</strong> Paranoia and psychosis are
     frightening, disorienting, and genuinely dangerous — they impair judgment and safety, not
@@ -1073,6 +1245,28 @@
     experiencing ongoing paranoia or a break from reality, that's a same-week conversation with a
     doctor, not something to wait out alone.
   </div>
+
+  <h3>Mixing cannabis with stimulants raises the stakes further</h3>
+  <p>
+    Amphetamine-type stimulants (prescription ADHD medication misused or taken without a genuine
+    need, or other amphetamines) sharply increase dopamine and norepinephrine by both promoting
+    their release and blocking their reuptake — a different mechanism from cannabis, but one that
+    pushes toward the same outcome: too much dopamine signal, interpreted by the brain as things
+    mattering that don't. Stimulant-induced psychosis is itself a well-documented phenomenon, and
+    combining heavy cannabis use with stimulant misuse plausibly compounds the risk, since both are
+    independently pushing on the same dopamine pathway from different directions.
+  </p>
+  <p class="muted">
+    Actress Amanda Bynes has spoken publicly and repeatedly about this exact combination. In a
+    2018 interview, she described misusing Adderall — obtained after describing ADHD symptoms she
+    didn't actually have — alongside daily cannabis use in her mid-20s, saying the combination
+    "really messed up my brain" and changed how she acted and saw herself. She's also said she
+    isn't certain a formal diagnosis applies to that period, describing genuine uncertainty about
+    whether what she went through was drug-induced psychosis — which is itself a useful reminder:
+    even the person living through it can't always name what's happening in the moment, and that
+    uncertainty is part of why professional evaluation matters rather than self-diagnosis either
+    way.
+  </p>
 </section>
 
 <section class="wrap" id="readiness">
@@ -1124,6 +1318,15 @@
     Practical note: these therapies exist specifically because willpower and information alone
     have a modest track record. Structured support — a therapist, a program, even a
     contingency-management app — meaningfully outperforms trying to do it entirely solo.
+  </p>
+  <h3>What this actually costs</h3>
+  <p class="muted">
+    In the US, cannabis use disorder is covered as a mental health/substance use benefit under
+    most insurance plans, including Medicaid, thanks to federal parity law — worth confirming
+    with your specific plan, but coverage is the norm, not the exception. For anyone uninsured or
+    underinsured, community health centers and SAMHSA's treatment locator (linked in the footer)
+    include sliding-scale and free options; cost alone shouldn't be the reason structured
+    treatment doesn't happen.
   </p>
 </section>
 
@@ -1231,6 +1434,34 @@
     and small human trials, not something to panic about, but it explains why some people notice
     an unexpected mild fog or anxiety spike weeks into quitting, especially around a hard workout
     or a skipped meal.
+  </p>
+</section>
+
+<section class="wrap" id="driving">
+  <div class="kicker">A practical safety note</div>
+  <h2>THC, driving, and why "I'm fine to drive" is hard to actually know</h2>
+  <p>
+    Unlike alcohol, there's no reliable roadside test that measures THC impairment the way a
+    breathalyzer measures blood alcohol. THC blood levels don't correlate cleanly with how
+    impaired someone actually is — a heavy daily user can have detectable THC in their blood for
+    12–24 hours after use, well past when any impairment remains, while an occasional user can be
+    meaningfully impaired at a lower measured level. That gap is exactly why "I don't feel that
+    high, I'm fine to drive" is such an unreliable judgment call to make about yourself in the
+    moment.
+  </p>
+  <p>
+    What the research is clear on: driving impairment peaks around 20–40 minutes after smoking and
+    can persist for several hours, affecting reaction time, attention, and lane tracking. Among
+    people who meet criteria for cannabis use disorder, most report having driven under the
+    influence in the past year. And critically, combining cannabis with alcohol is worse than
+    either alone — mixing the two is associated with substantially higher crash risk than cannabis
+    or alcohol by itself, not just an additive bump.
+  </p>
+  <p class="muted">
+    This isn't about judgment — plenty of people who'd never consider driving drunk don't apply
+    the same rule to cannabis, partly because the "am I actually impaired right now" signal is
+    genuinely harder to read for THC than for alcohol. If quitting is partly motivated by wanting
+    to stop making that particular gamble, that's a completely legitimate reason on its own.
   </p>
 </section>
 
@@ -1490,6 +1721,15 @@
     disinhibition, is well established in the neuroscience literature specifically for
     cannabinoids, not just assumed by analogy from other drugs.
   </p>
+  <p>
+    Picture a water tank with a valve that normally only opens a little at a time, keeping the
+    flow controlled. GABA cells are that valve. THC doesn't touch the tank itself — it jams the
+    valve part-way open, so more water rushes out than the system intended. Do that daily for
+    years, and the tank starts producing less water on its own and shrinking the valve mechanism
+    to compensate for how often it's being forced open — which is exactly why, once the jamming
+    stops, both the water supply and the valve need real time to recalibrate rather than
+    snapping back the moment THC is gone.
+  </p>
   <p class="muted">
     With sustained heavy use, this repeated disinhibition is part of what drives the broader
     downregulation covered above — the brain scales back its own dopamine and receptor activity to
@@ -1653,6 +1893,19 @@
         impression of how this is going.
       </p>
     </div>
+    <div class="condition">
+      <h3>Your job, if you need time or support</h3>
+      <p>
+        In the US, seeking treatment for a substance use disorder — not active use, treatment
+        specifically — is legally protected in real ways. The FMLA can provide up to 12 weeks of
+        unpaid, job-protected leave for treatment if you meet eligibility requirements (generally
+        12 months with your employer, 1,250 hours worked, and a company with 50+ employees within
+        75 miles). The ADA can require reasonable accommodations once you're in treatment or
+        recovery, like a modified schedule for appointments. Neither protects active impairment on
+        the job, and this isn't legal advice — but it's worth knowing these protections exist
+        before assuming quitting has to be handled entirely off the record.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -1673,6 +1926,23 @@
   </p>
 </section>
 
+<section class="wrap" id="glossary">
+  <div class="kicker">Terms used on this page</div>
+  <h2>Glossary</h2>
+  <dl class="glossary">
+    <div><dt>CB1 receptor</dt><dd>The main receptor THC binds to in the brain; heavy use causes the brain to reduce these, which is a core driver of tolerance and withdrawal.</dd></div>
+    <div><dt>Endocannabinoid system</dt><dd>The body's own network of receptors and self-produced cannabinoids (like anandamide) that THC hijacks and disrupts with regular use.</dd></div>
+    <div><dt>CUD (cannabis use disorder)</dt><dd>The clinical diagnosis for problematic cannabis use, roughly 1 in 10 users, higher for those who start as teens.</dd></div>
+    <div><dt>PAWS</dt><dd>Post-acute withdrawal syndrome — wave-like low mood or anxiety that can recur for weeks to months after physical withdrawal ends.</dd></div>
+    <div><dt>Anhedonia</dt><dd>Reduced ability to feel pleasure from normally enjoyable activities, tied to dopamine system disruption during withdrawal.</dd></div>
+    <div><dt>CHS</dt><dd>Cannabinoid hyperemesis syndrome — cyclical severe nausea and vomiting in some very heavy, long-term users, relieved only by stopping entirely.</dd></div>
+    <div><dt>Dopamine</dt><dd>A neurotransmitter central to motivation and reward; THC disrupts its normal regulation, driving much of withdrawal's emotional flatness.</dd></div>
+    <div><dt>GABA</dt><dd>The brain's main inhibitory signal; THC indirectly increases dopamine release by quieting GABA cells that normally hold it in check.</dd></div>
+    <div><dt>VTA (ventral tegmental area)</dt><dd>The brain region where dopamine-producing cells originate — the physical site where cannabis's reward effects begin.</dd></div>
+    <div><dt>Lapse vs. relapse</dt><dd>A lapse is a single slip; a relapse is abandoning the goal entirely. Biologically and practically, they're very different events.</dd></div>
+  </dl>
+</section>
+
 <section class="wrap sources" id="sources">
   <div class="kicker">References</div>
   <h2>Sources</h2>
@@ -1681,6 +1951,7 @@
   <h3>Withdrawal & mechanism</h3>
   <div class="source-item"><div class="concept">Prevalence of sleep difficulty during withdrawal</div><div class="cite">Livne, O., et al. (2019), cited below, which reports sleep difficulty at 68.2% among frequent users with diagnosable withdrawal syndrome — the figure used here in place of a less precise secondary estimate.</div></div>
   <div class="source-item"><div class="concept">Cannabis withdrawal review, including sex differences in severity</div><div class="cite">Bonnet, U., & Preuss, U. W. (2017). The cannabis withdrawal syndrome: current insights. <em>Substance Abuse and Rehabilitation</em>, 8, 9–37.</div></div>
+  <div class="source-item"><div class="concept">FMLA and ADA protections for substance use disorder treatment</div><div class="cite">U.S. Department of Labor (FMLA, 29 U.S.C. § 2601 et seq.) and U.S. Equal Employment Opportunity Commission (ADA, 42 U.S.C. § 12102) — federal statutes; protections apply to treatment-seeking, not active use or impairment. General information, not legal advice.</div></div>
   <div class="source-item"><div class="concept">Relapse prevention model, including rationalization after a lapse</div><div class="cite">Marlatt, G. A., & George, W. H. (1984). Relapse prevention: Introduction and overview of the model. <em>British Journal of Addiction</em>, 79(3), 261–273.</div></div>
   <div class="source-item"><div class="concept">Timeline of physical vs. psychological withdrawal symptoms</div><div class="cite">Budney, A. J., Moore, B. A., Vandrey, R. G., & Hughes, J. R. (2003). The time course and significance of cannabis withdrawal. <em>Journal of Abnormal Psychology</em>, 112(3), 393–402.</div></div>
   <div class="source-item"><div class="concept">CBT-I for cannabis withdrawal-related insomnia</div><div class="cite">Clinical treatment guidance on insomnia due to marijuana withdrawal, including CBT-I protocol and evidence for sustained benefit up to two years.</div></div>
@@ -1702,6 +1973,10 @@
 
   <h3>Psychosis mechanism</h3>
   <div class="source-item"><div class="concept">Aberrant salience model of psychosis</div><div class="cite">Kapur, S. (2003). Psychosis as a state of aberrant salience. <em>American Journal of Psychiatry</em>, 160(1), 13–23.</div></div>
+  <div class="source-item"><div class="concept">Public account of combined cannabis and stimulant misuse and drug-induced psychosis</div><div class="cite">Schreiber, A. (2018). Amanda Bynes on Getting Sober and Finding Herself Again. <em>PAPER Magazine</em>.</div></div>
+  <div class="source-item"><div class="concept">Relative danger of withdrawal across substance classes</div><div class="cite">Withdrawal Syndromes. <em>StatPearls</em>, National Center for Biotechnology Information/NIH (updated 2024); Time-course of DSM-5 cannabis withdrawal symptoms in poly-substance users. <em>BMC Psychiatry</em> (2013).</div></div>
+  <div class="source-item"><div class="concept">Edible cannabis absorption, onset, and overconsumption risk</div><div class="cite">Widely documented pharmacokinetic difference: oral THC is metabolized through the liver into 11-hydroxy-THC, delaying onset 30 minutes to 2 hours compared to inhalation, a mechanism described across clinical and public health cannabis literature.</div></div>
+  <div class="source-item"><div class="concept">Amphetamine mechanism (dopamine/norepinephrine release and reuptake blockade) and stimulant-induced psychosis</div><div class="cite">Well-established pharmacology; amphetamine-type stimulants are a recognized cause of substance-induced psychosis in the clinical literature.</div></div>
   <div class="source-item"><div class="concept">CBT for cannabis cessation in first-episode psychosis</div><div class="cite">Randomized controlled trial of CBT-CC vs. treatment as usual in first-episode psychosis cannabis users. <em>PMC9224093</em> (2022).</div></div>
 
   <h3>Treatment evidence</h3>
@@ -1715,6 +1990,9 @@
   <div class="source-item"><div class="concept">Marijuana Anonymous, 12-step peer support</div><div class="cite">Marijuana Anonymous World Services (marijuana-anonymous.org); Recovery.com overview of MA structure and outcomes.</div></div>
   <div class="source-item"><div class="concept">SMART Recovery, secular 4-point program</div><div class="cite">SMART Recovery — Marijuana Addiction Help & Resources (smartrecovery.org).</div></div>
   <div class="source-item"><div class="concept">THC detection windows by test type and use pattern</div><div class="cite">Vandergriendt, C., reviewed by Theisen, E. How Long Does Weed Stay in Your System? <em>Healthline</em> (2026), citing a 2017 detection-window review.</div></div>
+  <div class="source-item"><div class="concept">Timing and duration of cannabis-related driving impairment</div><div class="cite">National Highway Traffic Safety Administration (2017). Marijuana-Impaired Driving: A Report to Congress. DOT HS 812 440.</div></div>
+  <div class="source-item"><div class="concept">Rate of driving under the influence of cannabis among CUD-symptomatic users</div><div class="cite">Recent Advances in the Science of Cannabis-Impaired Driving. <em>PMC</em> (2026 review).</div></div>
+  <div class="source-item"><div class="concept">Combined alcohol and cannabis use, crash risk</div><div class="cite">Simultaneous Alcohol/Cannabis Use and Driving Under the Influence in the U.S. <em>PMC</em>.</div></div>
 
   <h3>Costs of heavy use & benefits of quitting</h3>
   <div class="source-item"><div class="concept">Cannabinoid hyperemesis syndrome, original discovery paper</div><div class="cite">Allen, J. H., de Moore, G. M., Heddle, R., & Twartz, J. C. (2004). Cannabinoid hyperemesis: cyclical hyperemesis in association with chronic cannabis abuse. <em>Gut</em>, 53(11), 1566–1570.</div></div>
@@ -1726,6 +2004,7 @@
   <div class="source-item"><div class="concept">Reefer Madness (1936) origins and Harry Anslinger's role in cannabis prohibition</div><div class="cite">Lee, M. A. The Origins of Reefer Madness. <em>Project CBD</em>; excerpted from Lee, M. A., <em>Smoke Signals: A Social History of Marijuana</em>. Scribner.</div></div>
   <div class="source-item"><div class="concept">Tobacco/nicotine co-use prevalence and effect on cannabis cessation</div><div class="cite">Yeap, K., et al. (2023). Does tobacco dependence worsen cannabis withdrawal? <em>The American Journal on Addictions</em>; Clinical management of cannabis withdrawal. <em>PMC9110555</em>.</div></div>
   <div class="source-item"><div class="concept">Nicotine-containing product use and cannabis relapse risk</div><div class="cite">Predicting Time to Return to Cannabis Use After a Cessation Attempt: Impact of Cumulated Exposure to Nicotine-Containing Products. <em>PMC11155328</em>.</div></div>
+  <div class="source-item"><div class="concept">Adolescent cannabis use and slower cognitive development (ABCD Study)</div><div class="cite">Wade, N. E., et al. (2026). Adolescent cannabis use and longitudinal cognitive development. <em>Neuropsychopharmacology</em>. Based on 11,000+ participants in the Adolescent Brain Cognitive Development (ABCD) Study, the largest long-term study of youth brain development in the US.</div></div>
   <div class="source-item"><div class="concept">IQ decline in persistent long-term cannabis users (Dunedin cohort)</div><div class="cite">Meier, M. H., et al. (2012). Persistent cannabis users show neuropsychological decline from childhood to midlife. <em>PNAS</em>, 109(40), E2657–E2664; follow-up: <em>American Journal of Psychiatry</em> (2022).</div></div>
   <div class="source-item"><div class="concept">Conflicting finding: no cognitive decline associated with cannabis use</div><div class="cite">Danish cohort study of 5,162 men followed 44 years, published in <em>Brain and Behavior</em>, discussed via NORML (2024).</div></div>
   <div class="source-item"><div class="concept">Respiratory symptom improvement after quitting</div><div class="cite">Hancox, R. J., et al. (2015). Effects of quitting cannabis on respiratory symptoms. <em>European Respiratory Journal</em>.</div></div>
@@ -1779,6 +2058,10 @@
     unmanageable — call or text <strong>988</strong> (Suicide & Crisis Lifeline, US). You don't
     need a clean explanation of what's happening to ask for help.
   </div>
+  <p class="muted" style="font-size:0.8rem; margin-top:0.8rem;">
+    Outside the US: the resources above are US-specific. Search "[your country] crisis line" or
+    "[your country] substance use helpline" — most countries have a free, confidential equivalent.
+  </p>
   <div class="visitor-count" id="visitor-count-wrap-footer" style="display:none; border-top:none; padding-top:0;">
     <span class="num" id="visitor-count-num-footer">…</span> people have read this guide so far.
   </div>
@@ -1834,6 +2117,28 @@
       }
     })
     .catch(function(){ /* fail silently, counters just stay hidden */ });
+})();
+</script>
+
+<script>
+(function(){
+  var progressBar = document.getElementById('progress-bar');
+  var backToTop = document.getElementById('back-to-top');
+
+  function onScroll(){
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+    backToTop.classList.toggle('visible', scrollTop > 700);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  backToTop.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 })();
 </script>
 
